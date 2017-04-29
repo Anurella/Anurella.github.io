@@ -35,8 +35,25 @@ function successful() {
   //get the value of the id 
 }
 
+// for the button index page  
+$("#mobi-menu-caller").click(function(){  console.log("hello"); 
+    $("#mobiMenu").hasClass("width")? $("#mobiMenu").removeClass("width"): $("#mobiMenu").addClass("width"); 
+    console.log("finished");
+   });
 
-//close side navigation onclick of a menu item
+//when a menu is clicked on the page it closes the sidebar 
+$(".moMenu").click(function(){  console.log("hello"); 
+    $("#mobiMenu").hasClass("width")? $("#mobiMenu").removeClass("width"): $("#mobiMenu").addClass("width"); 
+    console.log("finished");
+   });
+
+// for the button in materials page 
+  $("#sm-caller").click(function(){  console.log("hello"); 
+    $("#sidemenu").hasClass("sm-left")? $("#sidemenu").removeClass("sm-left"): $("#sidemenu").addClass("sm-left"); 
+    console.log("finished");
+   });
+
+
    
 $(document).ready(function() {
 
@@ -57,24 +74,6 @@ $(document).ready(function() {
     }
   });
 }); 
-
-// for the button index page  
-$("#mobi-menu-caller").click(function(){  console.log("hello"); 
-    $("#mobiMenu").hasClass("width")? $("#mobiMenu").removeClass("width"): $("#mobiMenu").addClass("width"); 
-    console.log("finished");
-   });
-
-//when a menu is clicked on the page it closes the sidebar 
-$(".moMenu").click(function(){  console.log("hello"); 
-    $("#mobiMenu").hasClass("width")? $("#mobiMenu").removeClass("width"): $("#mobiMenu").addClass("width"); 
-    console.log("finished");
-   });
-
-// for the button in materials page 
-  $("#sm-caller").click(function(){  console.log("hello"); 
-    $("#sidemenu").hasClass("sm-left")? $("#sidemenu").removeClass("sm-left"): $("#sidemenu").addClass("sm-left"); 
-    console.log("finished");
-   });
 
 });
 
