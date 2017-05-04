@@ -101,13 +101,12 @@
   		<div id="body">
 
           <section id="carouS">
-            <div id="blueCarousel" class="carousel slide" data-ride=""> 
-            <p style="color: white;"> A carosuel will be placed here </p>
-            <div class="carousel-inner"  style="display: none;">
-              <div class="item active"> <img src="images/carous_2.jpg" width="100%"> </div> 
-              <div class="item"> <img src="images/carous_3.jpg" width="100%"> </div> 
-              <div class="item"> <img src="images/carous_4.jpg" width="100%"> </div> 
-              <div class="item"> <img src="images/carous_5.jpg" width="100%"> </div> 
+            <div id="blueCarousel" class="carousel slide" data-ride="carousel"> 
+            <div class="carousel-inner">
+              <div class="item active"> <img src="images/carous_1.jpg" > </div> 
+              <div class="item"> <img src="images/carous_2.jpg" > </div> 
+              <div class="item"> <img src="images/carous_3.jpg" > </div> 
+              <div class="item"> <img src="images/carous_5.jpg" > </div> 
             </div>
             </div>
               <!-- not a carousel in full-->
@@ -142,7 +141,7 @@
 
            <div class="aB col-sm-4"> 
           <div class="work"> <img src="images/deliver.png" style="float: left; height: 100%;"> <h4>  DELIVER </h4> </div>
-                <p> Final output is exported in the clients preferred file format, transferred to any device that is provided. Delivery all boils down to the client's preference. </p>
+                <p> Final output is exported in the clients preferred audio format, transferred to any device that is provided. Delivery all boils down to the client's preference. </p>
                </div> 
                </div> <!-- end of how we work  -->
           </section>
@@ -152,7 +151,7 @@
             <div  id="dForm" class="col-md-6"> 
 
                  <h3> SHOOT AT US WITH YOUR QUESTIONS </h3>
-                 <form  name="bForm"  action="contact.php" role="form" onsubmit="successful()"> 
+                 <form  id="bForm" name="bForm"  action="contact.php" role="form" onsubmit="successful()"> 
 
                  <input class="form-control" type="text" id="name" name="name" required placeholder="What your mom calls you?"> 
                  <input class="form-control" type="text" id="lname" name="lname" required placeholder="What is your FAMILY name?"> 

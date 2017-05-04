@@ -166,9 +166,9 @@ footer
 
 @media screen and (min-width: 768px) {
    
-    #audio ul  {padding:0; margin-top:10px; margin-bottom:10px;}
+    #audio ul  {padding:0; margin-top:17px; margin-bottom:17px;}
     #audio ul li { display: inline; margin:auto 14px;}
-    #audio i { font-size: 28px; }
+    #audio i { font-size: 20px; }
 
 }
 
@@ -176,7 +176,7 @@ footer
   carous 
 **************************/
 #carouS { }
-#carouS { height: 300px; } 
+.carousel-inner .item img { width: 100%; }
 ul.caRous { margin: 0; padding: 0; }
 ul.caRous li span { position: absolute; height: 100%; width: 100%; color: transparent; background-size: cover; background-position: 50% 50%;
                     background-repeat: no-repeat; opacity: 0;  z-index: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden;
@@ -249,12 +249,12 @@ ul.caRous li:nth-child(4) span { background-image: url("../images/carous_5.jpg")
 
 }
 
-#carouS img {height: 100%;}
-
 @media screen and (min-width: 768px)
 {
-     #carouS { height: 500px; }
+     #carouS {  }
+     .carousel-inner .item img { height:600px; }
 }
+
 /****************************
 contact , about 
 ****************************/
@@ -360,7 +360,7 @@ MATERIALS PAGE
   position: fixed;
   top: 0;
   z-index: 70;
-  height: 100%;
+  height: 150%;
   width:240px;
   left:-240px;
   margin: auto;
@@ -384,7 +384,7 @@ MATERIALS PAGE
 .sm-hold li { margin-bottom: 5px; font-size: 24px; }
 .sm-hold li span { transition: color .4s ease-in-out; }
 .sm-hold li span { font-family: 'Alegreya Sans SC', sans-serif;  }
-.cp-right { margin-top: 10px; font-size: 14px !important; } 
+.cp-right { margin-top: 10px; font-size: 14px !important; font-weight: bold; } 
 .sm-hold li a:hover span { color:#0066cc; }
 
 /** class to add the left:120px to the sidemenu*/

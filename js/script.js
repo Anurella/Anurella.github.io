@@ -31,8 +31,11 @@ function stOp(){
 
 
 function successful() { 
+  var x = document.getElementById("subBut").value;
  document.getElementById("subBut").innerHTML = "Successful !!!";
-  //get the value of the id 
+ $('#bForm').children('input','textarea').val('');
+  //change element back 
+  document.getElementById("subBut").innerHTML = x;
 }
 
 // for the button index page  
