@@ -3,8 +3,6 @@
 
 ****************************************/
 
-@import url('https://fonts.googleapis.com/css?family=Revalia');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
 
  * {
 
@@ -22,7 +20,7 @@ html,body {
 }
 
 
-
+.txa { text-align: center; }
 
 img{
   max-width: 100%;
@@ -35,7 +33,7 @@ a:hover, a:focus { text-decoration: none; }
 
 ul{ list-style: none; }
 
-#preloader{ position: absolute;}
+
 
  #main_container{
 
@@ -43,7 +41,7 @@ ul{ list-style: none; }
      position:relative;
      background-color: black;
      padding-bottom: 10px;
-     border: 3px solid #0066cc;
+    /* border: 3px solid #0066cc;*/
  }
 
 #header {
@@ -57,6 +55,7 @@ ul{ list-style: none; }
 
 #audio, #carouS, #contact, #about { position: relative; }
 
+#about { color:white; }
 
 #footer {
 
@@ -177,77 +176,6 @@ footer
 **************************/
 #carouS { }
 .carousel-inner .item img { width: 100%; }
-ul.caRous { margin: 0; padding: 0; }
-ul.caRous li span { position: absolute; height: 100%; width: 100%; color: transparent; background-size: cover; background-position: 50% 50%;
-                    background-repeat: no-repeat; opacity: 0;  z-index: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden;
-                     -webkit-animation: caRous  12s linear infinite 0s;
-    -moz-animation: caRous  12s linear infinite 0s;
-    -o-animation: caRous  12s linear infinite 0s;
-    -ms-animation: caRous  12s linear infinite 0s;
-    animation: caRous  12s linear infinite 0s; 
-
-                    }
-/** assign background images **/
-ul.caRous li:nth-child(1) span { background-image: url("../images/carous_2.jpg"); 
- 
-} 
-
-ul.caRous li:nth-child(2) span { background-image: url("../images/carous_3.jpg"); 
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-   animation-delay: 3s; 
-} 
-
-
-ul.caRous li:nth-child(3) span { background-image: url("../images/carous_4.jpg"); 
-    
--webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-   animation-delay: 6s; 
-
-
-} 
-
-ul.caRous li:nth-child(4) span { background-image: url("../images/carous_5.jpg"); 
-   -webkit-animation-delay: 9s;
-  -moz-animation-delay: 9s;
-  -o-animation-delay: 9s;
-  -ms-animation-delay: 9s;
-   animation-delay: 9s; 
-
-} 
-
-/****** keyframes ********/
-
-@keyframes caRous { 
-
-0% {
-      opacity: 0;
-      -webkit-animation-timing-function: ease-in;
-  }
-
-  16% {
-      opacity: 1;
-      -webkit-animation-timing-function: ease-out;
-  }
-
-  33% {
-      opacity: 1;  
-  }
-
-  50% {
-      opacity: 0; 
-      
-  }
-  100% { opacity: 0 }
-
-
-
-}
 
 @media screen and (min-width: 768px)
 {
@@ -290,6 +218,7 @@ input:-moz-placeholder { font-style: italic; color:black; }
 .tot-p { padding-right: 10px; padding-left: 10px; }
 .tot h2, .tit h2 { text-align: center; }
 .work{ height: 50px; margin-bottom: 8px;}
+.work img{ float: left; height:100%; }
 .work h4 { padding: 14px;}
 
 @media screen and (min-width:768px) and (max-width: 991px)
@@ -555,3 +484,37 @@ ul.bg-slider li { width: 100%; height: 100vh; position:absolute; top: 0px;
 
 }
 
+
+
+
+/********************
+COMPETITON PAGE 
+***********************/
+
+#compet { margin-top: 15px; margin-left: 20px; margin-right: 20px;}
+
+
+#compet img {  width: 100%; height: 100%;}
+
+.color  { color: white; text-align: center; }
+
+.color-a { font-size: 20px; }
+
+a.color-a:hover { color:#0066cc; }
+
+a.color-a:active { color:white; }
+.compet-info { color: white; margin-top:10px; margin-left: 20px; margin-right: 20px; }
+
+#titl { text-align:center; color:white;}
+
+@media screen and (max-width: 768px)
+{
+  .color h3, .color-a { font-size: 17px; }
+
+}
+
+@media screen and (min-width:  768px)
+{ 
+     #compet { height: 400px; }
+
+ }
