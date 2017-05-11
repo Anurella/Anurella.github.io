@@ -41,7 +41,11 @@ ul{ list-style: none; }
      position:relative;
      background-color: black;
      padding-bottom: 10px;
+<<<<<<< HEAD
     /* border: 3px solid #0066cc;*/
+=======
+    
+>>>>>>> 7dc04562d4a24f67c453da79deaf2d21d1f035ca
  }
 
 #header {
