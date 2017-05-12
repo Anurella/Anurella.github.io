@@ -11,7 +11,7 @@
     <!-- css files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="blue_css/blue_style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Revalia" rel="stylesheet">
     <!-- favicon  -->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -24,7 +24,8 @@
 	<meta name="theme-color" content="#000000">
 
 	<title> Blue Steam Entertainment </title>
-
+  
+  <noscript>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </noscript>
 </head>
 
 <body onload="plaY('sonG')"> 
@@ -102,7 +103,7 @@
   		<div id="body">
 
           <section id="carouS">
-            <div id="blueCarousel" class="carousel slide" data-ride="carousel"> 
+            <div id="blueCarousel" class="carousel slide"> 
             <div class="carousel-inner">
               <div class="item active"> <img src="images/carous_1.jpg" > </div> 
               <div class="item"> <img src="images/carous_2.jpg" > </div> 
@@ -162,7 +163,7 @@
             <textarea id="comments" id="message" name="message" placeholder="What's on your mind? " rows="5" class="form-control"></textarea> 
                   <!-- button -->
                    
-                  <div> 
+                  <div id="divbut"> 
                     <button id="subBut" class="btn btn-default" type="submit"> <i class="fa fa-envelope" ></i>  SEND </button> </div>
                  </form>
              </div>  <!--   end of dForm  -->
@@ -220,22 +221,34 @@
 
 
       	<!-- making use of cdn to make the page as light as possible-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="js/script.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js" ></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+      <script src="js/script.js" async></script>
       <script type="text/javascript">
 
-     
-         var docWidth = document.documentElement.offsetHeight;
+          
+          //defer loadding css sccripts 
+          /* First CSS File */
+        var giftofspeed = document.createElement('link');
+        giftofspeed.rel = 'stylesheet';
+        giftofspeed.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+        giftofspeed.type = 'text/css';
+        var godefer = document.getElementsByTagName('link')[0];
+        godefer.parentNode.insertBefore(giftofspeed, godefer);
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetHeight > docWidth) {
-      console.log(el);
-    }
-  }
-);
+
+        $(function() { $("#blueCarousel").carousel(); });
+     
+//          var docWidth = document.documentElement.offsetHeight;
+
+// [].forEach.call(
+//   document.querySelectorAll('*'),
+//   function(el) {
+//     if (el.offsetHeight > docWidth) {
+//       console.log(el);
+//     }
+//   }
+// );
     
 
   </script>

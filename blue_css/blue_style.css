@@ -195,6 +195,7 @@ contact , about
  #contact h3 { font-size: 18px; }
 #dForm {padding-bottom:10px;}
 #dForm .btn { padding: 8px 12px; border-radius: 17px; }
+#divbut { text-align: center; }
 .btn-default {color: white; background-color:#0066cc;}
 .btn-default:hover, .btn-default.focus, .btn-default:focus { color:black; background-color:#0066cc; }
 .form-control {border-radius: 0px; margin-bottom:5px; border:1px solid #0066cc;  -webkit-transition: 1s ease-in;
@@ -330,7 +331,7 @@ MATERIALS PAGE
 {
   #sidemenu.sm-left { height:150%; transform:rotate(-30deg); left: 186px; top: -176px; }
   .sm-hold { top: 36%; }
-  .sm-hold li { font-size: 27px; }
+  .sm-hold li { font-size: 23px; }
   .cp-right { transform: rotate(90deg); transform-origin: left; font-size: 17px !important;
     font-weight: bold;}
 
