@@ -41,11 +41,7 @@ ul{ list-style: none; }
      position:relative;
      background-color: black;
      padding-bottom: 10px;
-<<<<<<< HEAD
     /* border: 3px solid #0066cc;*/
-=======
-    
->>>>>>> 7dc04562d4a24f67c453da79deaf2d21d1f035ca
  }
 
 #header {
@@ -190,16 +186,23 @@ footer
 /****************************
 contact , about 
 ****************************/
-
+ .divImg { position:relative; width: 100%; margin:15px 0px; text-align: center; padding: 15px; }
+  .divImg  div { border:3px solid black;  width:250px; height:250px; /*border-radius:50%;*/ display: inline-block;
+   background-size: cover; background-repeat: no-repeat; background-position: center; }
+  .tega { background-image: url("../images/tega1.jpeg"); }
+  .rage { background-image: url("../images/rage.jpeg"); }
  #contact { background-color:white; padding-top: 1px;}
  #contact h3 { font-size: 18px; }
-#dForm {padding-bottom:10px;}
+#dForm { padding-bottom:10px; }
 #dForm .btn { padding: 8px 12px; border-radius: 17px; }
 #divbut { text-align: center; }
 .btn-default {color: white; background-color:#0066cc;}
 .btn-default:hover, .btn-default.focus, .btn-default:focus { color:black; background-color:#0066cc; }
 .form-control {border-radius: 0px; margin-bottom:5px; border:1px solid #0066cc;  -webkit-transition: 1s ease-in;
   transition: 1s ease;} 
+
+.divImg div:hover { border-color: #0066cc; }
+
 
 /***************
  placeholder
@@ -233,7 +236,7 @@ input:-moz-placeholder { font-style: italic; color:black; }
 
 @media screen and (min-width:992px)
 {
-    #about { height: 350px; }
+   
     .tit {  margin-left: 17px; margin-right: 12px; }
     #contact {height:400px; padding:0 3%;}
     #contact h3 { font-size: 24px; }
@@ -260,14 +263,27 @@ input:-moz-placeholder { font-style: italic; color:black; }
 
 @media screen and (min-width:768px)
 {
-    #about { height:400px; }
+    #about { height:100%; overflow: hidden; }
    .tot-p { width:100%; max-width:700px; margin:auto; padding:0px !important; }
+   .tega, .rage { margin-right:5%; }
 }
 
 @media screen and (min-width:1200px)
 {
    .tot-p { width:100%; max-width:980px; margin:auto;}
 }
+
+
+
+@media screen and (max-width: 433px)
+{
+     .tega, .rage{ margin-bottom: 10px; }
+     
+}
+
+
+
+
 /**************************
 MATERIALS PAGE 
 ***************************/
@@ -315,13 +331,19 @@ MATERIALS PAGE
 
 .sm-hold { position: relative; top: 30%;}
 .sm-hold img {  width:80%; margin-bottom:10px;  margin-left: 20px; }
-.sm-hold li { margin-bottom: 5px; font-size: 24px; }
+.sm-hold li { margin-bottom: 5px; font-family: 'Alegreya Sans SC', sans-serif; font-size: 20px;}
 .sm-hold li span { transition: color .4s ease-in-out; }
 .sm-hold li span { font-family: 'Alegreya Sans SC', sans-serif;  }
 .cp-right { margin-top: 10px; font-size: 14px !important; font-weight: bold; } 
 .sm-hold li a:hover span { color:#0066cc; }
 
 /** class to add the left:120px to the sidemenu*/
+
+@media screen and (max-width: 320px)
+{
+  .sm-hold li { font-size: 18px;}
+}
+
 @media screen and (max-width: 767px)
 {
   #sidemenu.sm-left { left: 120px; }

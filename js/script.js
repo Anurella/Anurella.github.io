@@ -1,5 +1,8 @@
   
 
+
+
+
 // song is autoplay but user can pause or stop 
    var sonG;
 
@@ -41,19 +44,19 @@ function successful() {
 // for the button index page  
 $("#mobi-menu-caller").click(function(){  console.log("hello"); 
     $("#mobiMenu").hasClass("width")? $("#mobiMenu").removeClass("width"): $("#mobiMenu").addClass("width"); 
-    console.log("finished");
+    console.log("Hope you like the page");
    });
 
 //when a menu is clicked on the page it closes the sidebar 
 $(".moMenu").click(function(){  console.log("hello"); 
     $("#mobiMenu").hasClass("width")? $("#mobiMenu").removeClass("width"): $("#mobiMenu").addClass("width"); 
-    console.log("finished");
+    console.log("Menu Closed");
    });
 
 // for the button in materials page 
   $("#sm-caller").click(function(){  console.log("hello"); 
     $("#sidemenu").hasClass("sm-left")? $("#sidemenu").removeClass("sm-left"): $("#sidemenu").addClass("sm-left"); 
-    console.log("finished");
+    console.log("Hope you like the Page");
    });
 
 
@@ -77,6 +80,9 @@ $(document).ready(function() {
     }
   });
 }); 
+
+//carousel 
+$(function() { $("#blueCarousel").carousel(); });
 
 });
 
