@@ -277,6 +277,7 @@ footer > div {
     background: url("../img/bgimgtab.png") no-repeat top center / cover;
   }
 
+
 }
 
 /*desktop*/
@@ -293,3 +294,32 @@ footer > div {
 media query for content
 ======================*/
 
+@media screen and (min-width: 22.5em)
+{
+    main {
+    top:25%;
+  }
+
+}
+
+/*600px*/
+@media screen and (min-width: 22.5em)
+{
+    main {
+    top:25%;
+  }
+
+  .countdown {
+
+    padding-bottom: 2em;
+    padding-top: 1.9em
+  }
+
+  .message {
+
+        
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+
+}
