@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/*========
+General
+=========*/
+
+*, *:before, *:after { 
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+a {
+
+  text-decoration: none;
+  color: white;
+}
+
+img { 
+  max-width: 100%;
+  width: 100%;
+ }
+
+
+body {
+  /*weight size/line-height family*/
+  font:300 16px/1.56 "Didact Gothic", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#fff;
+  background:url("../img/backgroundimg.png") no-repeat top center / cover;
+}
+
+
+header, main, footer { 
+  position:absolute; 
+  width:100%;
+}
+
+
+/*==========
+main style
+=============*/
+
+header {
+  top:0;
+  height: 70px;
+  background-color:#8ACDEA; 
+  padding-top:12px;
+
+}
+
+.logocontainer {
+  width: 156px;
+  margin:0 auto;
+}
+
+main {
+
+  top: 20%;
+  text-align: center;
+  padding-left:20px;
+  padding-right:20px; 
+
+}
+
+main h1 {
+
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: 0;
+  padding-bottom: 0.625em;
+
+}
+
+/*=============
+countdown styles
+===============*/
+
+
+
+.countdown {
+
+  display: table;
+  margin:auto;
+  padding-bottom: 1em;
+  padding-top: 0.9em;
+
+}
+
+.countdown > div {
+
+  display: inline-block;
+  min-width: 65px
+}
+
+
+span {
+
+    position: relative;
+    display: block;
+    font-size: 16px;
+  }
+    
+    span:before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+    }
+
+
+.message {
+  
+  margin-top: 1em;
+  margin-bottom: 2em;
+  background-color: rgba(140, 72, 67, 0.66);
+
+}
+
+.message p {}
+
+form { 
+  
+   text-align: center;
+}
+
+input {
+
+  display: inline-block;
+  border: 2px solid #8C4843;
+  padding:7px;
+}
+
+input[type=email] {
+  color:#8C4843;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+    
+}
+
+input[type=submit]
+{
+   background-color: #8C4843;
+   color:#fff;
+   padding:7px 14px;
+   border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+  transition:all .2s ease-in-out;
+}
+
+input[type=submit]:hover ,input[type=submit]:focus {
+  background-color:#fff;
+  color:#8C4843;
+}
+
+
+footer {
+
+  padding-bottom: 12px;
+  bottom: 0;
+  text-align: center;
+}
+
+
+footer > div {
+  display: inline-block;
+}
+
+.insta {
+  margin-right: 10%;
+}
+
+.insta a {
+  font-size: 1.5em;
+}
+
+
+.insta a:hover, .insta a:focus{
+  Scolor: #8C4843;
+}
+
+.copyright-info {
+  margin-left: 10%;
+  font-size: 14px;
+}
+
+/*Tablet - 481px and more*/
+@media screen and (min-width: 30.0625em) {
+
+ 
+ h1 {
+ font-size: 2em;/*32px*/
+ }
+ h2 {
+ font-size: 1.5em;/*24px*/
+ }
+ 
+}
+
+/*Desktop - 769px and more*/
+@media screen and (min-width: 48.0625em) {
+
+  
+
+ h1 {
+ font-size: 2.25em; /*36px*/
+ }
+ h2 {
+ font-size: 2em;/*22px*/
+ }
+
+}
+
+
+/*media query for background image */
+
+/*tablet*/
+
+@media screen and (min-width: 48.0625em)
+{
+    body {
+    background: url("../img/bgimgtab.png") no-repeat top center / cover;
+  }
+
+}
+
+/*desktop*/
+@media screen and (min-width: 64em)
+{
+   body {
+    background: url("../img/bgimglap.png") no-repeat top center / cover;
+  }
+}
+
+
+
+/*=====================
+media query for content
+======================*/
+
