@@ -39,3 +39,39 @@
     console.log("end");
   }, 1000);
 })();
+
+
+function notifyme() {
+
+  //get the details of the email 
+
+  var email = document.site_form.site_form_email.value;
+
+  //simple ajax 
+
+  $.ajax({
+
+      url:"contact.php",
+      method:"POST",
+      data:{
+
+        email:email
+      },
+
+      success:function(data){
+
+        document.site_form.reset();
+
+        // popup message
+
+
+      },
+
+      error:function(err){
+
+      }
+
+  });
+
+  return false;
+}

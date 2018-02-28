@@ -165,6 +165,8 @@ span {
 
 .message {
   
+  max-width:500px;
+  margin:0 auto;
   margin-top: 1em;
   margin-bottom: 2em;
   background-color: rgba(140, 72, 67, 0.66);
@@ -208,6 +210,24 @@ input[type=submit]:hover ,input[type=submit]:focus {
   color:#8C4843;
 }
 
+
+
+/*=========
+Popup modal
+=============*/
+
+.popup {
+
+  position: absolute;
+  background-color: #c68e17;
+  top:2%;
+  width: 30%;
+  
+}
+
+.popup .close{
+
+}
 
 footer {
 
@@ -284,7 +304,8 @@ footer > div {
 @media screen and (min-width: 64em)
 {
    body {
-    background: url("../img/bgimglap.png") no-repeat top center / cover;
+    background: url("../img/bgimglap.png") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -317,9 +338,9 @@ media query for content
 
   .message {
 
-        
     margin-top: 2em;
     margin-bottom: 3em;
   }
 
 }
+
