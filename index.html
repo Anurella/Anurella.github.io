@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title> Mum n Afrikan </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Author" content="Anurella Ndukwu">
-        <meta name="keywords" content="Mums, Africa, First time Mums, Mumnafrikan">
-        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/stylesheet/mainstyle.css">
-        <link rel="icon" type="image/png" href="assets/favicon/favicon.ico">
-    </head>
-    <body>
-        
+
+<head>
+    <meta charset="utf-8">
+    <title> Mum n Afrikan </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="Anurella Ndukwu">
+    <meta name="keywords" content="Mums, Africa, First time Mums, Mumnafrikan">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheet/mainstyle.css">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.ico">
+</head>
+
+<body>
+    
         <header>
             <div class="logocontainer"> <img src="assets/img/logo.png" alt="Mum n Afrikan Logo"> </div>
         </header>
@@ -40,17 +42,29 @@
             <div class="message">
                 <p>A place for mums in africa to  share opinions obout motherhood. <br> Website is under construction, subscribe to be notified.</p>
             </div>
+
             <form action="" method="" id="site_form" onsubmit="return notifyme();">
-                <input id="site_form_email" type="email" placeholder="Your email Address" required /><!--
+                <input id="site_form_email" type="email" placeholder="Your email Address" required /><!-- 
                 --><input type="submit" value="Notify Me" id="site_form_submit" />
             </form>
-        </main>
+        </main> 
         
-        <div class="popup">
-            <a class="close" href="#">&times;</a>
-            <p class="successful"> Thank you and you will be notified!!! </p>
-            <p class="error" style="display: none;"> Message not sent. </p>
+        <div class="">
+           
+                <div class="popup"  
+                id="successful"> 
+                    <h4> Thank you </h4>
+                    <a class="close" href="#">&times;</a> 
+                    <p>You will be notified once the blog is up</p>
+                </div>
+
+                <div class="popup" id="error">
+                    <h4> Sorry </h4>
+                    <a class="close" href="#">&times;</a> 
+                    <p> Mail not sent, Try again </p>
+                </div>
         </div>
+
         <footer>
             <div class="insta"> <a href="https://www.instagram.com/mum.n.afrikan/" target="_blank"><i class="fab fa-instagram"></i></a>  </div>
             <div class="copyright-info">  <p> &#9400; MumnAfrikan 2018 </p> </div>
@@ -58,6 +72,7 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/js/time.js" async></script>
-        
-    </body>
+    
+</body>
+
 </html>
