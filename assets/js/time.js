@@ -1,8 +1,7 @@
 
- // time function
-
-
-
+//function 
+ 
+// time function
 (function () {
   // Specify the deadline date
   var deadlineDate = new Date('April 30, 2018 23:59:59').getTime();
@@ -45,13 +44,15 @@ function notifyme() {
 
   //get the details of the email 
 
-  var email = document.site_form.site_form_email.value;
-
+  var email = document.site_form.email.value;
+  var ele = document.getElementById("successful");
+  var ele2 = document.getElementById("error");
   //simple ajax 
 
   $.ajax({
 
-      url:"contact.php",
+      
+      url:"http://quicksms1.com/contact.php",
       method:"POST",
       data:{
 
@@ -61,14 +62,12 @@ function notifyme() {
       success:function(data){
 
         document.site_form.reset();
-
         // popup message
-
-
+        ele.classList.add("fadeIn");
       },
 
       error:function(err){
-
+         ele2.classList.add("fadeIn"); 
       }
 
   });
