@@ -1,76 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <title> Mum n Afrikan </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Author" content="Anurella Ndukwu">
-    <meta name="keywords" content="Mums, Africa, First time Mums, Mumnafrikan">
-    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/stylesheet/mainstyle.css">
-    <link rel="icon" type="image/png" href="assets/favicon/favicon.ico">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UX-compatible" content="ie-edge">
+	<meta name="Author" content="Amaka Anurella">
+	<title>
+		Solar Planet Inspiration 
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+
 </head>
 
+
 <body>
+     <!-- HEADER  -->
+
+     <div class="solar__header"> <h3> SOLAR SYSTEM  </h3> 
+		<p class="solar__header-p"> Design Inspiration by <a href="https://twitter.com/Dathink" target="_blank">Malik Dellidj </a> </p> 
+
+     	<p class="desc"> According to Malik this is a true time scaled solar-system, which means that every objects have a time relative to an Earth year.
+    You can change the number in second of the.
+    <br>
+    <code>$year-in-second</code>
+    variable to increase the speed of revolutions. Here 1 year = 30 seconds.
+		</p>
+      
+     	<form  method="GET" id="form" name="form" class="formm">
+            <h3> Let's Play a Game </h3>
+            Name  <input type="text"  id="name" name="name" placeholder="what is your name" > <br>
+            How many days does it take for Venus to revolve round the Sun?    <br>
+     		<input type="number" name="answer"  placeholder="to the nearest whole number" id="ans">
+     		<button type="submit" onclick="getAnswer(this.form);"> ANSWER  </button>
+     	</form>
+
+		<div id="result"></div>
+
+<!-- end of solar header -->
+     </div>
+
+
+     <!-- BODY  -->
+
+     <div class="solar__syst"> 
+     	<div class="sun"></div>
+     	<div class="mercury"></div>
+     	<div class="venus"></div>
+     	<div class="earth"></div>
+     	<div class="mars"></div>
+     	<div class="jupiter"></div>
+     	<div class="saturn"></div>
+     	<div class="uranus"></div>
+     	<div class="neptune"></div>
+     	<div class="pluto"></div>
+     	<div class="asteriods-belt"></div>
+
+     </div>
+
+
+
+     <!-- FOOTER  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js" ></script>
+<script src="solar.js"> </script>
+
+<script type="text/javascript">
     
-        <header>
-            <div class="logocontainer"> <img src="assets/img/logo.png" alt="Mum n Afrikan Logo"> </div>
-        </header>
-        <!-- main body of site -->
-        <main>
-            <h1> COMING SOON !!! </h1>
-            <div class="countdown">
-                <div class="countdown__days">
-                    <div class="number"></div>
-                    <span>Days</span>
-                </div>
-                <div class="countdown__hours">
-                    <div class="number"></div>
-                    <span>Hours</span>
-                </div>
-                <div class="countdown__minutes">
-                    <div class="number"></div>
-                    <span>Minutes</span>
-                </div>
-                <div class="countdown__seconds">
-                    <div class="number"></div>
-                    <span>Seconds</span>
-                </div>
-            </div>
-            <div class="message">
-                <p>A place for mums in africa to  share opinions obout motherhood. <br> Website is under construction, subscribe to be notified.</p>
-            </div>
-
-            <form action="" method="" id="site_form" name="site_form" onsubmit= "return notifyme()">
-                <input id="email"  name="email" type="email" placeholder="Your email Address" required /><!-- 
-                --><input type="submit" value="Notify Me" id="site_form_submit" />
-            </form>
-        </main> 
-        
-        
-           
-                <div class="popup"  
-                id="successful"> 
-                    <h4> Thank you </h4>
-                    <p>You will be notified once the blog is up</p>
-                </div>
-
-                <div class="popup" id="error">
-                    <h4> Sorry </h4>
-                    <p> Mail not sent, Try again </p>
-                </div>
-        
-
-        <footer>
-            <div class="insta"> <a href="https://www.instagram.com/mum.n.afrikan/" target="_blank"><i class="fab fa-instagram"></i></a>  </div>
-            <div class="copyright-info">  <p> &#9400; MumnAfrikan 2018 </p> </div>
-        </footer>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/js/time.js" async></script>
-    
+</script>
 </body>
-
 </html>
