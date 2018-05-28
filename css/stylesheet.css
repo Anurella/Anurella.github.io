@@ -1,0 +1,184 @@
+/*****
+RESET SHEET
+**********/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*************
+DIAGNOSTIC
+*****************/
+div:empty, span:empty,
+li:empty, p:empty,
+td:empty, th:empty {
+  padding: 0.5em;
+  background: yellow; }
+
+*[style], font, center {
+  outline: 5px solid red; }
+
+*[class=""], *[id=""] {
+  outline: 5px dotted red; }
+
+img[alt=""] {
+  border: 3px dotted red; }
+
+img:not([alt]) {
+  border: 5px solid red; }
+
+img[title=""] {
+  outline: 3px dotted fuchsia; }
+
+img:not([title]) {
+  outline: 5px solid fuchsia; }
+
+table:not([summary]) {
+  outline: 5px solid red; }
+
+table[summary=""] {
+  outline: 3px dotted red; }
+
+th {
+  border: 2px solid red; }
+
+th[scope="col"], th[scope="row"] {
+  border: none; }
+
+a[href]:not([title]) {
+  border: 5px solid red; }
+
+a[title=""] {
+  outline: 3px dotted red; }
+
+a[href="#"] {
+  background: lime; }
+
+a[href=""] {
+  background: fuchsia; }
+
+/*********
+ GENERAL 
+********/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 100%; }
+
+img {
+  max-width: 100%; }
+
+main {
+  position: relative;
+  min-height: 100vh;
+  color: white; }
+
+.hwp {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+
+.text--white {
+  color: #fff; }
+
+.firstpage {
+  padding: 2rem 1rem 0;
+  background: url("../img/background.png") no-repeat bottom;
+  background-size: cover; }
+  .firstpage .logo {
+    margin-top: 3em; }
+    .firstpage .logo img {
+      height: 45px; }
+  .firstpage .message {
+    width: 60%;
+    color: #fff;
+    margin-top: 1em; }
+    .firstpage .message h5 {
+      font-weight: bold; }
+    .firstpage .message p {
+      font-size: 0.8rem; }
+
+/*** bottom of page and @margin-left removes pawdding-left of parent element and centers item**/
+.nextpage {
+  position: absolute;
+  bottom: calc(100% - 95vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -1em;
+  width: inherit;
+  color: #BBBFC1; }
+  .nextpage p {
+    font-size: 0.8rem; }
+  .nextpage span {
+    display: inline-block; }
+  .nextpage span:first-child {
+    height: 14px;
+    width: 14px; }
+
+.aboutUs {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../img/aboutUs-bg.png") no-repeat bottom;
+  background-size: cover;
+  padding: 1rem; }
+
+.page--header span {
+  height: 20px; }
+
+.page--header h4 {
+  display: inline-block;
+  color: #929799;
+  font-size: 1.1rem;
+  margin-left: 0.5em;
+  vertical-align: top; }
+
+.portfolio {
+  background: url("../img/portfolio-bg.png") no-repeat bottom;
+  background-size: cover;
+  padding: 1rem; }
+
+/*# sourceMappingURL=stylesheet.css.map */

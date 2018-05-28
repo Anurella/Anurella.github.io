@@ -1,0 +1,108 @@
+var gulp = require('gulp');
+//sass file 
+var sass = require('gulp-sass');
+//require('gulp-ruby-sass');
+//helps to check the right css files will be used
+var csslint = require('gulp-csslint');
+//minify images / svg 
+var imagemin = require('gulp-imagemin');
+var cssnano = require('gulp-cssnano');
+var autoprefixer = require('gulp-autoprefixer');
+//var jshint = require('gulp-jshint');
+var notify = require('gulp-notify');
+var concat = require('gulp-concat');
+//var uglify = require('gulp-uglify ');
+var rename = require('gulp-rename');
+var cache = require('gulp-cache');
+var del = require('del');
+var sourcemaps = require('gulp-sourcemaps');
+var browsersync = require('browser-sync').create();
+var runsequence = require('run-sequence')
+
+
+gulp.task('styles', function() {
+
+	// return sass , { style : 'expanded' }
+	gulp.src('app/sass/stylesheet.scss')
+	.pipe(sourcemaps.init())
+	.pipe(autoprefixer('last 2 version'))
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('dist/assets/css'))
+	//rename
+	.pipe(rename( { suffix : '.min' }))
+	//minify css
+	.pipe(cssnano())
+	.pipe(sourcemaps.write('.'))
+	.pipe(gulp.dest('dist/assets/css'))
+	.pipe(browsersync.reload({
+		stream: true
+	}))
+	.pipe(notify( { message : 'This task is complete' } ));
+
+});
+
+
+
+//compress images 
+gulp.task('images', function() {
+	//specify images
+	return gulp.src('app/img/*.+(png|jpg|jpeg|gif|svg)')
+	//cache images that will be compresseed already
+	.pipe(cache(imagemin( { optimizationLevel:5, progressive:true, interlaced:true})))
+	.pipe(gulp.dest('dist/assets/img'))
+	.pipe(notify({ message : 'Image Task complete'}));
+
+});
+
+//javascript files 
+
+//browser reload
+gulp.task('browsersync', function() {
+
+	browsersync.init ({ 
+		server: { 
+			baseDir : 'app'
+		},
+	})
+
+});
+
+
+//clean
+gulp.task('clean:dist', function() {
+
+	return del.sync('dist');
+});
+
+//clear cache
+gulp.task('cache:clear', function(callback) {
+	return cache.clearAll(callback);
+});
+
+
+//watch 
+
+gulp.task('watch', ['browsersync', 'styles'], function() {
+
+	// gulp.watch( "file to watch",  task to run)
+
+	gulp.watch('app/sass/stylesheet.scss', ['styles']);
+	gulp.watch('app/img/*.+(png|jpg|jpeg|gif|svg)', ['images']);
+
+	//html filess
+	gulp.watch('app/*.html', browsersync.reload);
+
+});
+
+//build
+gulp.task('build', function (callback) {
+	runsequence('clean:dist', ['sass', 'images'], callback)
+})
+
+//default task
+//using run sequence to ensure tasks run in parallel
+gulp.task('default', function(callback) {
+	runsequence(['styles', 'browsersync', 'watch'], callback)
+})
+
+

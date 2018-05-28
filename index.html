@@ -1,71 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UX-compatible" content="ie-edge">
-	<meta name="Author" content="Amaka Anurella">
-	<title>
-		Solar Planet Inspiration 
-	</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-    
-
+	<meta name="description" content="A portfolio website that gives information about Atuma wears, shows off work and lets potential clients get in contact">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+	<meta name="author" content="Anurella Ndukwu Amaka">
+	<title> ATUMA WEARS </title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylesheet.css" type="text/css">
 </head>
 
 
 <body>
-     <!-- HEADER  -->
+<!-- four main components with children -->
+	
+	   <main>
+		    
+		    <div class="firstpage hwp">
+		    	
+				<div class="logo">
+					<img src="img/logo2.svg" alt="ATUMA WEARS LOGO" title="Brand Logo">
+				</div>
 
-     <div class="solar__header"> <h3> SOLAR SYSTEM  </h3> 
-		<p class="solar__header-p"> Design Inspiration by <a href="https://twitter.com/Dathink" target="_blank">Malik Dellidj </a> </p> 
+				<div class="message"> 
+					 <h5> CATCHY PHRASE </h5>
 
-     	<p class="desc"> According to Malik this is a true time scaled solar-system, which means that every objects have a time relative to an Earth year.
-    You can change the number in second of the.
-    <br>
-    <code>$year-in-second</code>
-    variable to increase the speed of revolutions. Here 1 year = 30 seconds.
-		</p>
-      
-     	<form  method="GET" id="form" name="form" class="formm">
-            <h3> Let's Play a Game </h3>
-            Name  <input type="text"  id="name" name="name" placeholder="what is your name" > <br>
-            How many days does it take for Venus to revolve round the Sun?    <br>
-     		<input type="number" name="answer"  placeholder="to the nearest whole number" id="ans">
-     		<button type="submit" onclick="getAnswer(this.form);"> ANSWER  </button>
-     	</form>
+					 <div class="line"></div>
+					 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus incidunt ipsam, doloribus autem beatae repellendus, cum maiores maxime accusantium, minima est sequi, fugiat alias voluptas obcaecati hic. Ex, odit, doloribus!</p>
+				</div>
 
-		<div id="result"></div>
+				<div class="nextpage">
+					<span><img src="img/aboutus.svg" alt=" About Us Icon " title=" "></span>
+					 <p> About Us </p>
+					 <span>  <a href="#aboutUs" title="Link to About Us page"><img src="img/arrow.svg" alt=" Navigation icon" title=" "></a></span>
+				</div>
 
-<!-- end of solar header -->
-     </div>
+		     </div>
 
+		    <!-- end of first page -->
+			<div id="aboutUs" class="aboutUs hwp">
+				
+				 <div class="page--header">
+				 	<span> <img src="img/aboutus.svg" alt="About Us Icon" title=" "> </span> <h4> ABOUT US </h4>
+				 </div>
 
-     <!-- BODY  -->
+				<div class="aboutUs__msg"> 
+					 <h5> CATCHY PHRASE </h5>
 
-     <div class="solar__syst"> 
-     	<div class="sun"></div>
-     	<div class="mercury"></div>
-     	<div class="venus"></div>
-     	<div class="earth"></div>
-     	<div class="mars"></div>
-     	<div class="jupiter"></div>
-     	<div class="saturn"></div>
-     	<div class="uranus"></div>
-     	<div class="neptune"></div>
-     	<div class="pluto"></div>
-     	<div class="asteriods-belt"></div>
+					 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus incidunt ipsam, doloribus autem beatae repellendus, cum maiores maxime accusantium, minima est sequi, fugiat alias voluptas obcaecati hic. Ex, odit, doloribus!</p>
+				</div>
 
-     </div>
+				<div class="nextpage">
+					<span><img src="img/works.svg" alt=" About Us Icon " title=" "></span>
+					 <p class="text--white"> Our Works </p>
+					 <span>  <a href="#aboutUs" title="Link to About Us page"><img src="img/arrow.svg" alt=" Navigation icon" title=" "></a></span>
+				</div>
+
+			</div>
 
 
+			<div class="portfolio hwp">
+				
+				 <div class="page--header">
+				 	<span> <img src="img/aboutus.svg" alt="About Us Icon" title=" "> </span> <h4> SOME OF OUR WORKS </h4>
+				 </div>
 
-     <!-- FOOTER  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js" ></script>
-<script src="solar.js"> </script>
+				<div class="portfolio__msg"> 
+					 <h2> COMING SOON  </h2>
+				</div>
 
-<script type="text/javascript">
-    
-</script>
+				<div class="nextpage">
+					<span><img src="img/works.svg" alt=" About Us Icon " title=" "></span>
+					 <p> Contact Us </p>
+					 <span>  <a href="#aboutUs" title="Link to About Us page"><img src="img/arrow.svg" alt=" Navigation icon" title=" "></a></span>
+				</div>
+
+			</div>
+
+			<div class="contactUs" id="contactUs">
+
+				<div class="page--header">
+				 	<span> <img src="img/aboutus.svg" alt="About Us Icon" title=" "> </span> <h4> ABOUT US </h4>
+				 </div>
+				
+				 <div class="contactUs__form">
+				 	<form action=""></form>
+				 </div>
+
+				 <div class="contactUs__details"> </div>
+
+				 <div class="map"></div>
+
+			</div>	
+
+		</main>
 </body>
+	
 </html>
