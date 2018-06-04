@@ -46,41 +46,8 @@ table {
 /*************
 DIAGNOSTIC
 *****************/
-div:empty, span:empty,
-li:empty, p:empty,
-td:empty, th:empty {
-  padding: 0.5em;
-  background: yellow; }
-
-*[style], font, center {
-  outline: 5px solid red; }
-
-*[class=""], *[id=""] {
-  outline: 5px dotted red; }
-
-img[alt=""] {
-  border: 3px dotted red; }
-
 img:not([alt]) {
   border: 5px solid red; }
-
-img[title=""] {
-  outline: 3px dotted fuchsia; }
-
-img:not([title]) {
-  outline: 5px solid fuchsia; }
-
-table:not([summary]) {
-  outline: 5px solid red; }
-
-table[summary=""] {
-  outline: 3px dotted red; }
-
-th {
-  border: 2px solid red; }
-
-th[scope="col"], th[scope="row"] {
-  border: none; }
 
 a[href]:not([title]) {
   border: 5px solid red; }
@@ -123,14 +90,23 @@ main {
 .text--white {
   color: #fff; }
 
+.text--grey {
+  color: #4F4F4F; }
+
+.mgtp {
+  margin-top: .3em; }
+
 .firstpage {
-  padding: 2rem 1rem 0;
+  padding: 2em 1em 0;
   background: url("../img/background.png") no-repeat bottom;
   background-size: cover; }
   .firstpage .logo {
     margin-top: 3em; }
     .firstpage .logo img {
       height: 45px; }
+  .firstpage .line {
+    border-bottom: 2px solid #fff;
+    margin: 0.5em 0; }
   .firstpage .message {
     width: 60%;
     color: #fff;
@@ -159,12 +135,11 @@ main {
     width: 14px; }
 
 .aboutUs {
-  height: 100vh;
-  width: 100%;
-  position: relative;
   background: url("../img/aboutUs-bg.png") no-repeat bottom;
   background-size: cover;
-  padding: 1rem; }
+  padding: 1em; }
+  .aboutUs .aboutUs__msg {
+    margin-top: 60%; }
 
 .page--header span {
   height: 20px; }
@@ -179,6 +154,101 @@ main {
 .portfolio {
   background: url("../img/portfolio-bg.png") no-repeat bottom;
   background-size: cover;
-  padding: 1rem; }
+  padding: 1em; }
+  .portfolio .portfolio__msg {
+    margin-top: calc(100vh - 60vh);
+    text-align: center; }
+
+.contactUs {
+  background-color: #E5E5E5;
+  padding: 1em;
+  color: #4F4F4F;
+  padding-bottom: 0; }
+
+.fnt {
+  font-size: 0.7em; }
+
+.contactUs__dets {
+  background-color: #E5E5E5;
+  margin: 0 -1em; }
+  .contactUs__dets > div {
+    padding: 1em; }
+
+.contactUs__form {
+  margin-right: 0.8em; }
+  .contactUs__form input[type="text"], .contactUs__form input[type="email"], .contactUs__form textarea {
+    padding: 0.7em 1em;
+    width: 100%;
+    background: #F2F2F2;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 0.6em;
+    display: block; }
+    .contactUs__form input[type="text"]:focus, .contactUs__form input[type="email"]:focus, .contactUs__form textarea:focus {
+      border: 1px solid #EB5757; }
+  .contactUs__form ::placeholder {
+    font-size: 0.9em;
+    color: #4F4F4F;
+    font-style: italic; }
+  .contactUs__form button {
+    background-color: #EB5757;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 0.7em 1em;
+    color: #fff;
+    transition: all 0.3s ease-in;
+    margin-left: 65%; }
+    .contactUs__form button span {
+      display: inline-block;
+      width: 14px; }
+    .contactUs__form button:hover {
+      background-color: rgba(235, 87, 87, 0.44);
+      border: 2px solid #EB5757; }
+
+.contactUs__details {
+  background-color: #4F4F4F;
+  color: #fff; }
+  .contactUs__details h5 {
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 0.1em; }
+  .contactUs__details .fnt span {
+    text-decoration: underline; }
+
+.contact__loc {
+  margin-bottom: 0.5em; }
+  .contact__loc span {
+    display: inline-block;
+    width: 14px; }
+  .contact__loc p {
+    font-size: 0.9em; }
+
+.map {
+  margin: 0 -1em;
+  height: 50vh; }
+
+footer {
+  background-color: #333333;
+  display: table;
+  width: 100%;
+  padding: 0.5em 0; }
+  footer > div {
+    display: table-cell;
+    color: #6D6D6D;
+    font-size: 0.7em;
+    padding: 0 0.5em; }
+  footer .copyright {
+    border-right: 2px solid white;
+    vertical-align: middle;
+    width: 50%; }
+  footer .instagram span {
+    display: inline-block; }
+    footer .instagram span img {
+      width: 20px; }
+  footer .instagram div {
+    display: inline-block;
+    margin-left: 0.5em;
+    width: 70%;
+    line-height: 1.2; }
 
 /*# sourceMappingURL=stylesheet.css.map */
