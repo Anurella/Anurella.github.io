@@ -125,7 +125,7 @@ main {
   align-items: center;
   margin-left: -1em;
   width: inherit;
-  color: #BBBFC1; }
+  color: #fff; }
   .nextpage p {
     font-size: 0.8rem; }
   .nextpage span {
@@ -139,12 +139,12 @@ main {
   background-size: cover;
   padding: 1em; }
   .aboutUs .aboutUs__msg {
-    margin-top: 60%; }
+    margin-top: 40vh; }
 
-.page--header span {
+.page__header span {
   height: 20px; }
 
-.page--header h4 {
+.page__header h4 {
   display: inline-block;
   color: #929799;
   font-size: 1.1rem;
@@ -197,7 +197,7 @@ main {
     padding: 0.7em 1em;
     color: #fff;
     transition: all 0.3s ease-in;
-    margin-left: 65%; }
+    margin-left: 79%; }
     .contactUs__form button span {
       display: inline-block;
       width: 14px; }
@@ -250,5 +250,114 @@ footer {
     margin-left: 0.5em;
     width: 70%;
     line-height: 1.2; }
+
+@-webkit-keyframes fill {
+  0% {
+    fill: #e79d9d; }
+  25% {
+    fill-opacity: 0.5; }
+  30% {
+    fill: #e48281; }
+  100% {
+    fill: #ed7878; } }
+
+@keyframes fill {
+  0% {
+    fill: #e79d9d; }
+  25% {
+    fill-opacity: 0.5; }
+  30% {
+    fill: #e48281; }
+  100% {
+    fill: #ed7878; } }
+
+.logoSvg rect {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate; }
+
+.logoSvg:hover rect {
+  -webkit-animation-name: fill;
+  animation-name: fill; }
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(5px); }
+  33% {
+    transform: translateY(10px); }
+  50% {
+    transform: translateY(20px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(5px); }
+  33% {
+    transform: translateY(10px); }
+  50% {
+    transform: translateY(20px); }
+  100% {
+    transform: translateY(0); } }
+
+.nav__arrow {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-name: bounce;
+  cursor: pointer;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-name: bounce;
+  cursor: pointer; }
+
+@media screen and (min-width: 48em) {
+  .firstpage {
+    background-image: url("../img/deskbackground.png");
+    background-position: center; }
+    .firstpage .logo {
+      margin-top: 19vh; }
+    .firstpage .message {
+      margin-top: 3em;
+      width: 40%; }
+  .page__header {
+    margin-top: 2em; }
+  .aboutUs {
+    background-image: url("../img/aboutUs-deskbg.png");
+    background-position: center; }
+  .aboutUs__msg {
+    width: 40vw;
+    margin-left: 50%;
+    margin-top: 34vh; }
+    .aboutUs__msg h5 {
+      font-size: 1.5rem;
+      margin-bottom: .5em; }
+    .aboutUs__msg p {
+      font-size: 1.2rem; }
+  .portfolio__msg h2 {
+    font-size: 3rem; }
+  .nomrg {
+    margin-top: 0; }
+  .contactUs {
+    padding: 0; }
+  .contactUs__dets {
+    display: flex;
+    width: 100%;
+    margin: 0; }
+    .contactUs__dets > div {
+      width: 50%; }
+  .contactUs__form button {
+    margin-left: 75%; }
+  .map {
+    margin: 0;
+    height: 30vh; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
