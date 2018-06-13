@@ -25,7 +25,7 @@ function test(elID)
 
   // Add smooth scrolling to all links
   $("a.pagNav").on('click', function(event) {
-  	event.preventDefault();
+  	
 
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);

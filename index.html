@@ -49,7 +49,7 @@
 				<div class="message"> 
 					 <h5> ACCESS TO AFFORDABLE WEARS </h5>
 
-					 <div class="line"></div>
+					
 					 <p> Having trouble getting ready made native wears that suits your style and at affordable prices ? You have come to the right place </p>
 				</div>
 
@@ -112,7 +112,7 @@
 				 	<p class="fnt"> Please fill out the form below and we would get in touch with you in 2 working days. </p>
 				 </div>
 				 
-				 		<form action="">
+				 		<form action="" class="clearfix">
 				 		<input name="conName" id="conName" type="text" placeholder="Name" required >
 				 		<input name="conEmail"  id="conEmail" type="text" placeholder="Email" required >
 				 		<textarea name="conMsg" id="conMsg"  placeholder="Message"></textarea>
@@ -124,18 +124,18 @@
 
 				 	<div class="contactUs__details">
 						 <h5> Contact Us </h5>
-						<p class="fnt"> For enquiry email us <span>atumawears@atumawears.com.ng</span> </p>
+						<p class="fnt"> For enquiry email us <span> atumawears@atumawears.com.ng </span> </p>
 
 						 <div class="contact__loc">
 						 	 <p> International Office </p>
-							 <p><span><img src="img/contact.svg" alt=""></span> +40059299259 </p>
+							 <p><span><img src="img/contact.svg" alt=""></span> 2525 West Pleasant Run, Lancaster TX. United States of America. </p>
 							 <p><span><img src="img/call.svg" alt=""></span> +39402935530</p>
 						 </div>
 
 						 <div class="contact__loc">
 						 	<p> Nigeran Office </p>
-							  <p><span><img src="img/contact.svg" alt=""></span> +40059299259 </p>
-							 <p><span><img src="img/call.svg" alt=""></span> +39402935530</p>
+							  <p><span><img src="img/contact.svg" alt=""></span> We working on it  </p>
+							 <p><span><img src="img/call.svg" alt=""></span> send us a message </p>
 
 						 </div>
 				 	  </div>
@@ -151,7 +151,8 @@
 		<footer>
 			<div class="copyright"> &copy; ATUMA WEARS 2018 </div>
 			<div class="instagram"> <span> <img src="img/instagram.svg" alt=""></span> 
-				<div> <p>stay connected @atumawears</p> </div> </div>
+				<div> <p>stay connected </p> <p> @atumawears</p> </div> 
+			</div>
 		</footer>
 
 
@@ -162,12 +163,12 @@
     async defer></script>
 
     	<script type="text/javascript">
-      var map;
+      var map, locMarker;
       function initMap() {
 
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom:3,
+          center: {lat:32.605198, lng:-96.809936},
+          zoom:10,
           mapTypeId: 'roadmap',
           styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -250,6 +251,14 @@
             }
           ]
 
+        });
+
+
+         var image = 'img/contact-color.svg';
+        locMarker = new google.maps.Marker( {
+        	position: {lat:32.605198, lng:-96.809936},
+        	map: map,
+        	icon: image
         });
 
       }

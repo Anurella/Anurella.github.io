@@ -70,12 +70,15 @@ a[href=""] {
   box-sizing: border-box; }
 
 html, body {
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 18px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   width: 100%; }
 
 img {
   max-width: 100%; }
+
+a:active, a:focus {
+  outline: none; }
 
 main {
   position: relative;
@@ -104,15 +107,19 @@ main {
     margin-top: 3em; }
     .firstpage .logo img {
       height: 45px; }
-  .firstpage .line {
-    border-bottom: 2px solid #fff;
-    margin: 0.5em 0; }
   .firstpage .message {
     width: 60%;
     color: #fff;
     margin-top: 1em; }
     .firstpage .message h5 {
-      font-weight: bold; }
+      font-size: 0.7rem;
+      font-weight: bold;
+      margin-bottom: 2em; }
+      .firstpage .message h5:after {
+        content: " ";
+        display: block;
+        border-bottom: 0.25px solid #BBBFC1;
+        padding-top: 2em; }
     .firstpage .message p {
       font-size: 0.8rem; }
 
@@ -139,7 +146,7 @@ main {
   background-size: cover;
   padding: 1em; }
   .aboutUs .aboutUs__msg {
-    margin-top: 40vh; }
+    margin-top: 31vh; }
 
 .page__header span {
   height: 20px; }
@@ -166,7 +173,8 @@ main {
   padding-bottom: 0; }
 
 .fnt {
-  font-size: 0.7em; }
+  font-size: 0.7em;
+  margin-bottom: 0.5em; }
 
 .contactUs__dets {
   background-color: #E5E5E5;
@@ -197,19 +205,25 @@ main {
     padding: 0.7em 1em;
     color: #fff;
     transition: all 0.3s ease-in;
-    margin-left: 79%; }
+    float: right; }
     .contactUs__form button span {
       display: inline-block;
       width: 14px; }
     .contactUs__form button:hover {
-      background-color: rgba(235, 87, 87, 0.44);
-      border: 2px solid #EB5757; }
+      background-color: rgba(235, 87, 87, 0.44); }
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
 
 .contactUs__details {
   background-color: #4F4F4F;
   color: #fff; }
   .contactUs__details h5 {
-    font-size: 0.8em;
+    font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 0.1em; }
   .contactUs__details .fnt span {
@@ -238,7 +252,7 @@ footer {
     font-size: 0.7em;
     padding: 0 0.5em; }
   footer .copyright {
-    border-right: 2px solid white;
+    border-right: 2px solid #ffffff1a;
     vertical-align: middle;
     width: 50%; }
   footer .instagram span {
@@ -342,20 +356,23 @@ footer {
       margin-bottom: .5em; }
     .aboutUs__msg p {
       font-size: 1.2rem; }
+  .portfolio {
+    background-image: url("../img/portfolio-deskbg.png");
+    background-position: center; }
   .portfolio__msg h2 {
     font-size: 3rem; }
   .nomrg {
     margin-top: 0; }
   .contactUs {
     padding: 0; }
+  .contact__loc {
+    margin-top: 1.3em; }
   .contactUs__dets {
     display: flex;
     width: 100%;
     margin: 0; }
     .contactUs__dets > div {
       width: 50%; }
-  .contactUs__form button {
-    margin-left: 75%; }
   .map {
     margin: 0;
     height: 30vh; } }
