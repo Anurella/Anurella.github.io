@@ -1,4 +1,6 @@
-# Pixel Art Maker Project
+# Pixel Art Maker Project 
+ALC Program
 
 ##link to github page
-anurella.github.io
+
+https://anurella.github.io/ 
