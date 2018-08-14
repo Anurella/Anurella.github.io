@@ -359,14 +359,14 @@ MENU CLOSE
 
 .sitenav__close::before {
   position: absolute;
-  content: "\f00d";
+  content: url("../images/times-solid.svg");
   top: 0.53333rem;
   left: 0.53333rem;
   z-index: 1; }
 
 .sitenav__close::after {
   position: absolute;
-  content: "";
+  content: url("../images/times-solid.svg");
   width: 0;
   height: 0;
   border: 1.66667rem solid #EE0C2A;
@@ -519,6 +519,9 @@ colors
 .bg-black {
   background-color: #000; }
 
+.black {
+  color: #000; }
+
 .bg-red {
   background: #FF1717; }
 
@@ -602,6 +605,14 @@ HOME PAGE
   top: -0.4em;
   left: -0.4em; }
 
+.super--script2 {
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  left: 0.4em; }
+
 .msg__content {
   font-size: .6rem; }
 
@@ -672,14 +683,22 @@ strong {
 SERVICE PAGE
 ---------- */
 .services__mural {
+  position: relative;
+  width: inherit;
+  height: inherit;
   background: #000 url("../images/servicemural.svg") no-repeat center/cover; }
 
 .services__main {
   text-align: center; }
 
 .services__main--one {
-  display: center;
-  align-content: center; }
+  padding: 3% 5%; }
+
+.services__main--two {
+  padding: 5% 5% 0 5%; }
+
+.main--two p:first-of-type {
+  font-size: .8rem; }
 
 /* -------
 CONTACT PAGE
@@ -733,6 +752,9 @@ colors
 ---------- */
 .bg-black {
   background-color: #000; }
+
+.black {
+  color: #000; }
 
 .bg-red {
   background: #FF1717; }
