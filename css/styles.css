@@ -348,7 +348,6 @@ MENU CLOSE
 ************/
 .sitenav__close {
   position: relative;
-  font-family: 'Font Awesome 5 Free';
   font-size: 0.9rem;
   color: #fff;
   width: 1.66667rem;
@@ -366,7 +365,7 @@ MENU CLOSE
 
 .sitenav__close::after {
   position: absolute;
-  content: url("../images/times-solid.svg");
+  content: "";
   width: 0;
   height: 0;
   border: 1.66667rem solid #EE0C2A;
@@ -404,7 +403,7 @@ input[type=checkbox]:checked ~ .sitenav__close {
   transform: translateY(-8.33333rem); }
 
 input[type=checkbox]:checked ~ .sitenav__close::before {
-  content: "\f0c9"; }
+  content: url("../images/bars-solid.svg"); }
 
 input[type=checkbox]:not(:checked) ~ .sitenav__item:nth-child(2) {
   transition: transform 0.2s 0.1s, background-color 0.2s;
