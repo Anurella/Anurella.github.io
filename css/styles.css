@@ -148,6 +148,100 @@ html, body {
 
 /*# sourceMappingURL=general.css.map */
 
+/* -----------
+colors
+---------- */
+.bg-black {
+  background-color: #000; }
+
+.black {
+  color: #000; }
+
+.bg-red {
+  background: #FF1717; }
+
+.bg-white {
+  background-color: #fff; }
+
+.white {
+  color: #fff; }
+
+.bg-red {
+  background-color: #FF1717; }
+
+.bg-grey {
+  background-color: #bcbcbc; }
+
+/*# sourceMappingURL=colors.css.map */
+
+/* --------
+FONT FACES
+ ---------*/
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./fonts/bebasneue.eot");
+  src: url("./fonts/bebasneue-webfont.woff") format("woff"), url("./fonts/bebasneue.svg") format("svg"), url("./fonts/bebasneue-webfont.ttf") format("truetype"), url("./fonts/bebasneue.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Tunga";
+  src: url("./fonts/tunga.eot");
+  src: url("./fonts/tunga.woff") format("woff"), url("./fonts/tunga.svg") format("svg"), url("./fonts/tunga.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("./fonts/roboto-regular.eot");
+  src: url("./fonts/roboto-regular.woff") format("woff"), url("./fonts/roboto-regular.svg") format("svg"), url("./fonts/roboto-regular.ttf") format("truetype"); }
+
+body {
+  font: 18px/22px 'Bebas Neue', 'Tunga', 'Roboto Regular' , Arial, sans-serif; }
+
+.bebasNeue {
+  font-family: 'Bebas Neue'; }
+
+.bebasNeue--bold {
+  font-family: 'Bebas Neue';
+  font-weight: 700; }
+
+.tunga {
+  font-family: 'Tunga'; }
+
+.robotoReg {
+  font-family: 'Roboto Regular'; }
+
+.bold {
+  font-weight: bold; }
+
+.roboto {
+  font-family: 'Roboto Regular'; }
+
+.roboto--bold {
+  font-family: 'Roboto Regular';
+  font-weight: 700; }
+
+/* --------
+font sizes
+---------- */
+.first__header {
+  font-size: 1rem; }
+
+.carousel-nav-left, .carousel-nav-right {
+  font-size: 0.5rem; }
+
+.carousel__msg p {
+  font-size: 1rem;
+  letter-spacing: 2px; }
+
+.small--text {
+  font-size: 0.7rem; }
+
+.about__content h4 {
+  font-size: 1rem; }
+
+.about__content h2 {
+  font-size: 1.2rem; }
+
+/*# sourceMappingURL=fonts.css.map */
+
 /* declare varaibles  /
  // colors
 
@@ -448,70 +542,6 @@ footer {
 
 /*# sourceMappingURL=header.css.map */
 
-/* --------
-FONT FACES
- ---------*/
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("./fonts/bebasneue.eot");
-  src: url("./fonts/bebasneue-webfont.woff") format("woff"), url("./fonts/bebasneue.svg") format("svg"), url("./fonts/bebasneue-webfont.ttf") format("truetype"), url("./fonts/bebasneue.otf") format("opentype"); }
-
-@font-face {
-  font-family: "Tunga";
-  src: url("./fonts/tunga.eot");
-  src: url("./fonts/tunga.woff") format("woff"), url("./fonts/tunga.svg") format("svg"), url("./fonts/tunga.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("./fonts/roboto-regular.eot");
-  src: url("./fonts/roboto-regular.woff") format("woff"), url("./fonts/roboto-regular.svg") format("svg"), url("./fonts/roboto-regular.ttf") format("truetype"); }
-
-body {
-  font: 18px/22px 'Bebas Neue', 'Tunga', 'Roboto Regular' , Arial, sans-serif; }
-
-.bebasNeue {
-  font-family: 'Bebas Neue'; }
-
-.bebasNeue--bold {
-  font-family: 'Bebas Neue';
-  font-weight: 700; }
-
-.tunga {
-  font-family: 'Tunga'; }
-
-.robotoReg {
-  font-family: 'Roboto Regular'; }
-
-.bold {
-  font-weight: bold; }
-
-.roboto {
-  font-family: 'Roboto Regular'; }
-
-/* --------
-font sizes
----------- */
-.first__header {
-  font-size: 1rem; }
-
-.carousel-nav-left, .carousel-nav-right {
-  font-size: 0.5rem; }
-
-.carousel__msg p {
-  font-size: 1rem;
-  letter-spacing: 2px; }
-
-.small--text {
-  font-size: 0.7rem; }
-
-.about__content h4 {
-  font-size: 1rem; }
-
-.about__content h2 {
-  font-size: 1.2rem; }
-
-/*# sourceMappingURL=fonts.css.map */
-
 /* -----------
 colors
 ---------- */
@@ -688,7 +718,8 @@ SERVICE PAGE
   background: #000 url("../images/servicemural.svg") no-repeat center/cover; }
 
 .services__main {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 1em; }
 
 .services__main--one {
   padding: 3% 5%; }
@@ -698,6 +729,60 @@ SERVICE PAGE
 
 .main--two p:first-of-type {
   font-size: .8rem; }
+
+.moreService {
+  padding: 1em 0; }
+
+.arrow__down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-top: 18px solid #fff; }
+
+.services__types {
+  display: none;
+  padding: 1em 2em;
+  flex-direction: column; }
+
+.service__type--item {
+  position: relative;
+  margin: 0 auto 1em; }
+
+.service__type--item > div {
+  position: relative;
+  width: 100%; }
+
+.servicetype--wrapper {
+  padding: 1em; }
+
+.servicetype--header {
+  font-size: 0.9rem;
+  line-height: 1;
+  margin-bottom: .5em;
+  text-align: center; }
+
+.servicetype--text {
+  line-height: 1; }
+
+.type1--img {
+  position: relative;
+  bottom: -0.5em; }
+
+.type2--img {
+  position: relative;
+  right: -8%;
+  bottom: -0.55em; }
+
+.type3--img {
+  position: relative;
+  left: -0.7em;
+  bottom: -0.3em; }
+
+.type4--img, .type5--img, .type6--img {
+  position: relative;
+  bottom: 0.6em; }
 
 /* -------
 CONTACT PAGE
@@ -744,30 +829,42 @@ CONTACT PAGE
 .contact__dets h5 {
   font-size: .9rem; }
 
+/* ----
+TLS
+--------- */
+.tlstaffing__mural {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  background: #000 url("../images/tlsmural.svg") no-repeat left center/cover; }
+
+.employer {
+  position: absolute;
+  top: 1.5em;
+  color: white;
+  font-size: .7rem;
+  line-height: 1.3;
+  background-color: black;
+  padding: .5em 1em;
+  right: 0;
+  text-align: center; }
+
+.tlstaffing__content {
+  width: 80%;
+  margin: 0 auto; }
+
+.tls__service--list {
+  font-size: .8rem;
+  margin: 1em; }
+
 /*# sourceMappingURL=layout.css.map */
 
-/* -----------
-colors
+/* --------------
+MEDIA QUERY
 ---------- */
-.bg-black {
-  background-color: #000; }
+@media (min-width: 480px) and (max-width: 758px) {
+  .service__type--item {
+    width: 60vw;
+    margin: 0 auto 1em; } }
 
-.black {
-  color: #000; }
-
-.bg-red {
-  background: #FF1717; }
-
-.bg-white {
-  background-color: #fff; }
-
-.white {
-  color: #fff; }
-
-.bg-red {
-  background-color: #FF1717; }
-
-.bg-grey {
-  background-color: #bcbcbc; }
-
-/*# sourceMappingURL=colors.css.map */
+/*# sourceMappingURL=mediaquery.css.map */
