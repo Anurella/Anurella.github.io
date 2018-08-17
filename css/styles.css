@@ -566,8 +566,11 @@ colors
 .bg-grey {
   background-color: #bcbcbc; }
 
+.align--center {
+  text-align: center; }
+
 main {
-  padding-top: 2em;
+  padding-top: 2.75em;
   position: relative;
   width: 100%; }
 
@@ -632,7 +635,17 @@ HOME PAGE
   vertical-align: baseline;
   position: relative;
   top: -0.4em;
-  left: -0.4em; }
+  left: -0.4em;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-name: bounce; }
 
 .super--script2 {
   display: inline-block;
@@ -840,22 +853,69 @@ TLS
 
 .employer {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   color: white;
   font-size: .7rem;
   line-height: 1.3;
   background-color: black;
-  padding: .5em 1em;
+  padding: 1em 1em;
   right: 0;
   text-align: center; }
 
 .tlstaffing__content {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 1em 0; }
 
 .tls__service--list {
   font-size: .8rem;
   margin: 1em; }
+
+.tls__service--list li {
+  position: relative;
+  margin: .5em 0 0 1.5em; }
+
+.tls__service--list li:before {
+  content: url("../images/right-arrow.svg");
+  position: absolute;
+  left: -1.5em; }
+
+/* ---------
+TLS FORM
+--------- */
+.tlsform__main {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
+.tls__logo--text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100vh - 80vh); }
+
+/* --------
+ANIMATION
+-------- */
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-0.3em); }
+  33% {
+    transform: translateY(0.4em); }
+  50% {
+    transform: translateY(0.1em); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-0.3em); }
+  33% {
+    transform: translateY(0.4em); }
+  50% {
+    transform: translateY(0.1em); }
+  100% {
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=layout.css.map */
 
