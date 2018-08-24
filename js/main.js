@@ -1,1 +1,1 @@
-console.log("Please have sense and you will be safe"),console.log("I am trying to have sense but yr not helpig");
+console.log("Please have sense and you will be safe"),console.log("I am trying to have sense but your not helpig");

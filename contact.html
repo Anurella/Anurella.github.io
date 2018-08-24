@@ -25,12 +25,21 @@
             </div>
             <nav class="sitenav" role="Navigation">
                 <input type="checkbox" checked id="sitenav__button">
-                <a href="#" class="sitenav__item bebasNeue"> HOME </a>
-                <a href="#" class="sitenav__item bebasNeue"> ABOUT </a>
-                <a href="#" class="sitenav__item bebasNeue"> SERVICES </a>
-                <a href="contact.html" class="sitenav__item bebasNeue sitenav--active"> CONTACT </a>
-                <a href="#" class="sitenav__item bebasNeue"> TLS </a>
+                <a href="index.html" class="sitenav__item bebasNeue"> HOME </a>
+                <a href="about.html" class="sitenav__item bebasNeue"> ABOUT </a>
+                <a href="services.html" class="sitenav__item bebasNeue"> SERVICES </a>
+                <a href="contact.html" class="sitenav__item bebasNeue"> CONTACT </a>
+                <a href="tlstaffing.html" class="sitenav__item bebasNeue"> TLS </a>
                 <label for="sitenav__button" class="sitenav__close"></label>
+            </nav>
+            <nav class="sitenav--two" role="Navigation">
+                <ul class="sitenav--list">
+                    <li>  <a href="index.html" class="sitenav--item bebasNeue "> HOME </a></li>
+                    <li> <a href="about.html" class="sitenav--item bebasNeue"> ABOUT </a></li>
+                    <li> <a href="services.html" class="sitenav--item bebasNeue"> SERVICES </a></li>
+                    <li>  <a href="contact.html" class="sitenav--item bebasNeue sitenav--active"> CONTACT </a></li>
+                    <li> <a href="tlstaffing.html" class="sitenav--item bebasNeue navbtn"> TLS </a> </li>
+                </ul>
             </nav>
         </header>
 
@@ -45,18 +54,27 @@
             <section class="contact__details bg-grey">
                 <div class="contact__form">
                     <p class="roboto"> Please fill out form details, we will get in touch as soon as possible. </p>
-                    <form action="">
+                    <form action="" class="site__Form">
                         <label for="name" class="form--label roboto"> Full Name </label>
-                        <input name="fullname" type="text" class="form--element" required=>
+                        <input name="fullname" type="text" class="form--element formrequired" required>
 
                         <label for="email" class="form--label roboto"> Email  </label>
-                        <input  name="email" type="email" class="form--element" required>
+                        <input  name="email" type="email" class="form--element formrequired" required>
+
+                        <label for="email" class="form--label roboto"> Subject   </label>
+                        <input  name="email" type="email" class="form--element formrequired" required placeholder="RE: ">
 
                         <label for="message" class="form--label roboto"> Message </label>
-                        <textarea name="message" id="" rows="6" class="form--element"></textarea>
+                        <textarea name="message" id="" rows="6" class="form--element formrequired"></textarea>
+
+
+                        <p class="form__success"> Thank you and we would get back to you. </p>
+                        <p class="form__required"> Please fill in required fields </p>
+                        <p class="form__error"> Sorry! Message not sent. </p>
+
 
                         <div style="display: flex; justify-content: center;">
-                            <button type="submit" class="site__btn red--btn"> SEND </button>
+                            <button type="submit" class="site__btn red--btn submit__Form"> SEND </button>
                         </div>
                     </form>
 
@@ -74,6 +92,8 @@
                             <li class="roboto small--text"> +1 862 444 9480 </li>
                         </ul>
                     </div>
+
+                    <div> &nbsp; &nbsp; </div>
 
                     <div class="dets--address">
                         <h5 class="bebasNeue"> Address </h5>

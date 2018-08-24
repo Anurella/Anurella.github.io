@@ -180,30 +180,30 @@ FONT FACES
 @font-face {
   font-family: "Bebas Neue";
   src: url("./fonts/bebasneue.eot");
-  src: url("./fonts/bebasneue-webfont.woff") format("woff"), url("./fonts/bebasneue.svg") format("svg"), url("./fonts/bebasneue-webfont.ttf") format("truetype"), url("./fonts/bebasneue.otf") format("opentype"); }
+  src: url("./fonts/bebasneue-webfont.woff2") format("woff2"), url("./fonts/bebasneue-webfont.woff") format("woff"), url("./fonts/bebasneue.svg") format("svg"), url("./fonts/bebasneue-webfont.ttf") format("truetype"), url("./fonts/bebasneue.otf") format("opentype"); }
 
 @font-face {
   font-family: "Tunga";
   src: url("./fonts/tunga.eot");
-  src: url("./fonts/tunga.woff") format("woff"), url("./fonts/tunga.svg") format("svg"), url("./fonts/tunga.ttf") format("truetype"); }
+  src: url("./fonts/tunga.woff2") format("woff2"), url("./fonts/tunga.woff") format("woff"), url("./fonts/tunga.svg") format("svg"), url("./fonts/tunga.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Roboto Regular";
   src: url("./fonts/roboto-regular.eot");
-  src: url("./fonts/roboto-regular.woff") format("woff"), url("./fonts/roboto-regular.svg") format("svg"), url("./fonts/roboto-regular.ttf") format("truetype"); }
+  src: url("./fonts/roboto-regular.woff2") format("woff2"), url("./fonts/roboto-regular.woff") format("woff"), url("./fonts/roboto-regular.svg") format("svg"), url("./fonts/roboto-regular.ttf") format("truetype"); }
 
 body {
   font: 18px/22px 'Bebas Neue', 'Tunga', 'Roboto Regular' , Arial, sans-serif; }
 
 .bebasNeue {
-  font-family: 'Bebas Neue'; }
+  font-family: Bebas Neue; }
 
 .bebasNeue--bold {
   font-family: 'Bebas Neue';
   font-weight: 700; }
 
 .tunga {
-  font-family: 'Tunga'; }
+  font-family: Tunga; }
 
 .robotoReg {
   font-family: 'Roboto Regular'; }
@@ -228,11 +228,13 @@ font sizes
   font-size: 0.5rem; }
 
 .carousel__msg p {
-  font-size: 1rem;
-  letter-spacing: 2px; }
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  line-height: 1.2; }
 
 .small--text {
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+  line-height: 1.2; }
 
 .about__content h4 {
   font-size: 1rem; }
@@ -523,6 +525,31 @@ input[type=checkbox]:not(:checked) ~ .sitenav__close {
   transition: transform 0.2s 0.1s, background-color 0.2s;
   transform: translateY(0); }
 
+/* ------
+non mobile nav
+------------- */
+.sitenav--list {
+  display: flex;
+  padding: .5em 0; }
+
+.sitenav--list li {
+  margin: 0 1em; }
+
+.sitenav--item {
+  font-size: .9rem; }
+
+.sitenav--item:hover,
+.sitenav--item:focus {
+  color: #D6011D; }
+
+.sitenav--active {
+  color: #D6011D; }
+
+.navbtn {
+  background: #bcbcbc;
+  border-radius: .5em;
+  padding: .5em .9em; }
+
 /**********
 FOOTER
 **********/
@@ -717,9 +744,12 @@ strong {
     color: #fe3f58;
     font-size: 1.4rem; }
 
-.about__bottom {
-  background: url("../images/about2.svg") no-repeat center center/cover;
-  height: 40vh; }
+.about__bottom img {
+  object-fit: cover;
+  object-position: center; }
+
+.tls__content--img3 {
+  display: none; }
 
 /* ------
 SERVICE PAGE
@@ -756,8 +786,7 @@ SERVICE PAGE
 
 .services__types {
   display: none;
-  padding: 1em 2em;
-  flex-direction: column; }
+  padding: 1em 2em; }
 
 .service__type--item {
   position: relative;
@@ -775,6 +804,10 @@ SERVICE PAGE
   line-height: 1;
   margin-bottom: .5em;
   text-align: center; }
+
+.staff__image img {
+  position: relative;
+  bottom: -0.3em; }
 
 .servicetype--text {
   line-height: 1; }
@@ -826,7 +859,7 @@ CONTACT PAGE
   width: 100%;
   border: 1px solid transparent;
   border-radius: .7em;
-  padding: .3em 0;
+  padding: .3em;
   margin-bottom: 1em; }
 
 .form--element:last-child {
@@ -842,6 +875,13 @@ CONTACT PAGE
 .contact__dets h5 {
   font-size: .9rem; }
 
+.form__success, .form__required, .form__error {
+  display: none;
+  font-size: 0.6rem; }
+
+.error {
+  background-color: #FF1717; }
+
 /* ----
 TLS
 --------- */
@@ -853,7 +893,7 @@ TLS
 
 .employer {
   position: absolute;
-  top: 1em;
+  top: 0;
   color: white;
   font-size: .7rem;
   line-height: 1.3;
@@ -894,6 +934,14 @@ TLS FORM
   position: absolute;
   top: calc(100vh - 80vh); }
 
+.tlsjob__form {
+  width: 100%; }
+
+.form__label {
+  display: block;
+  font-size: .8rem;
+  font-weight: bold; }
+
 /* --------
 ANIMATION
 -------- */
@@ -922,9 +970,85 @@ ANIMATION
 /* --------------
 MEDIA QUERY
 ---------- */
+@media screen and (max-width: 767px) {
+  .sitenav--two {
+    display: none; } }
+
 @media (min-width: 480px) and (max-width: 758px) {
   .service__type--item {
     width: 60vw;
     margin: 0 auto 1em; } }
+
+@media screen and (min-width: 768px) {
+  .big--text {
+    font-size: .9rem;
+    margin-bottom: .5em; }
+  /* ---------
+    HEADER
+    -------  */
+  header {
+    justify-content: space-between;
+    align-content: center; }
+  .sitenav {
+    display: none; }
+  .carousel__msg p {
+    font-size: 2.5rem; }
+  .first__header {
+    font-size: 1.5rem; }
+  .tls__content--img2 {
+    display: none; }
+  .tls__content--img3 {
+    display: block; }
+  .about__content {
+    width: 90%;
+    -webkit-display: flex;
+    display: flex;
+    line-height: 1.2;
+    color: #484848; }
+  .about__content-1 {
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-right: 1.5em; }
+  .about__content-1 h2 {
+    position: relative;
+    top: 37%;
+    font-size: 3vw; }
+  .about__content-2 {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    width: 80%;
+    line-height: 1.2;
+    column-gap: 35px; }
+  .contact__details > div {
+    width: 50%; }
+  .contact__dets h2 {
+    font-size: 1.5rem; }
+  .contact__dets h5 {
+    font-size: 1.1rem; }
+  .contact__form p {
+    font-size: 1.1rem; }
+  .form--label {
+    font-size: 1rem; }
+  .servicetype__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1em auto; }
+  .servicetype__container > div {
+    flex: 0 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .services__main--one h1 {
+    font-size: 1.3rem; }
+  .type4--img, .type5--img, .type6--img {
+    bottom: -0.3em; }
+  .tls__service--list {
+    column-count: 2; }
+  .jobseeker {
+    margin: 1em 0; } }
 
 /*# sourceMappingURL=mediaquery.css.map */

@@ -23,12 +23,21 @@
             </div>
             <nav class="sitenav" role="Navigation">
                 <input type="checkbox" checked id="sitenav__button">
-                <a href="index.html" class="sitenav__item bebasNeue sitenav--active"> HOME </a>
+                <a href="index.html" class="sitenav__item bebasNeue"> HOME </a>
                 <a href="about.html" class="sitenav__item bebasNeue"> ABOUT </a>
                 <a href="services.html" class="sitenav__item bebasNeue"> SERVICES </a>
                 <a href="contact.html" class="sitenav__item bebasNeue"> CONTACT </a>
                 <a href="tlstaffing.html" class="sitenav__item bebasNeue"> TLS </a>
                 <label for="sitenav__button" class="sitenav__close"></label>
+            </nav>
+            <nav class="sitenav--two" role="Navigation">
+                <ul class="sitenav--list">
+                    <li>  <a href="index.html" class="sitenav--item bebasNeue"> HOME </a></li>
+                    <li> <a href="about.html" class="sitenav--item bebasNeue"> ABOUT </a></li>
+                    <li> <a href="services.html" class="sitenav--item bebasNeue sitenav--active"> SERVICES </a></li>
+                    <li>  <a href="contact.html" class="sitenav--item bebasNeue"> CONTACT </a></li>
+                    <li> <a href="tlstaffing.html" class="sitenav--item bebasNeue navbtn"> TLS </a> </li>
+                </ul>
             </nav>
     </header>
 
@@ -45,7 +54,7 @@
                 <div class="white bg-red services__main--one">
                     <h1 class="bebasNeue--bold"> OUR SERVICES </h1>
 
-                    <p class="roboto small--text"> The Lord’s Ventures offers the various services of which our major business being our staffing agency known as THE LORD STAFFING. </p>
+                    <p class="roboto small--text big--text"> The Lord’s Ventures offers the various services of which our major business being our staffing agency known as THE LORD STAFFING. </p>
                 </div>
 
                 <div class="bg-white services__main--two">
@@ -55,7 +64,7 @@
                     </svg></span> STAFFING AGENCY </h2>
                     <p class="roboto"> (THE LORD STAFFING)   </p> </div>
 
-                    <p class="roboto small--text"> We give our clients good deals and provide the most suitable employee that meets the client’s needs maximally. Just try us and you’d wish you tried us earlier!</p>
+                    <p class="roboto small--text big--text"> We give our clients good deals and provide the most suitable employee that meets the client’s needs maximally. Just try us and you’d wish you tried us earlier!</p>
 
                         <a href="tlstaffing.html" class="link__btn red--btn"> Read More </a>
                         <div class="staff__image">
@@ -73,54 +82,56 @@
 
         <section id="serviceTypes" class="services__types  bg-grey">
 
-            <div class="service__type--item bg-white">
+            <div class="servicetype__container">
+                <div class="service__type--item bg-white">
 
-                <div class="servicetype--wrapper">
-                    <h4 class="roboto servicetype--header"> INTERNATIONAL MONEY TRANSFER   </h4>
-                    <p class="roboto small--text servicetype--text"> We help transfer your fast money transfers all around the world giving you the best rates you’ve ever seen with impeccable customer service. </p>
+                    <div class="servicetype--wrapper">
+                        <h4 class="roboto servicetype--header"> INTERNATIONAL MONEY TRANSFER   </h4>
+                        <p class="roboto small--text servicetype--text"> We help transfer your fast money transfers all around the world giving you the best rates you’ve ever seen with impeccable customer service. </p>
+                    </div>
+
+                    <div><img src="images/moneytransfer.svg" alt="" class="type1--img"></div>
+                </div>
+                <div class="service__type--item bg-white">
+                    <div class="servicetype--wrapper">
+                        <h4 class="roboto servicetype--header"> PROFESSIONAL PASSPORT PHOTOGRAPHS  </h4>
+                        <p class="roboto small--text servicetype--text"> We meet our clients need by providing them with the highest quality passport photographs with our high-grade cameras and our experienced photographer. </p>
+                    </div>
+
+                    <div><img src="images/passportphoto.svg" alt=""class="type2--img"></div>
+                </div>
+                <div class="service__type--item bg-white">
+                    <div class="servicetype--wrapper">
+                        <h4 class="roboto servicetype--header"> PRINTING, PHOTOCOPYING, FAXING...  </h4>
+                        <p class="roboto small--text servicetype--text"> We have the latest machines that give the best printing production you could possibly need. </p>
+                    </div>
+
+                    <div><img src="images/printing.svg" alt="" class="type3--img"></div>
+                </div>
+                <div class="service__type--item bg-white">
+                    <div class="servicetype--wrapper">
+                        <h4 class="roboto servicetype--header"> GRAPHIC AND WEB DESIGN </h4>
+                        <p class="roboto small--text servicetype--text"> Our team of graphic designers work hard daily to meet your most modern requirements for logo designs, proposal, and web designs and hosting with much more… </p>
+                    </div>
+
+                    <div><img src="images/graphic.svg" alt="" class="type4--img"></div>
                 </div>
 
-                <div><img src="images/moneytransfer.svg" alt="" class="type1--img"></div>
-            </div>
-            <div class="service__type--item bg-white">
-                <div class="servicetype--wrapper">
-                    <h4 class="roboto servicetype--header"> PROFESSIONAL PASSPORT PHOTOGRAPHS  </h4>
-                    <p class="roboto small--text servicetype--text"> We meet our clients need by providing them with the highest quality passport photographs with our high-grade cameras and our experienced photographer. </p>
+                <div class="service__type--item bg-white">
+                    <div class="servicetype--wrapper">
+                        <h4 class="roboto servicetype--header"> EVENT RENTALS <p class="roboto small--text">(CHAIRS, TABLES, CANOPIES/TENTS, DECO)</p> </h4>
+                        <p class="roboto small--text servicetype--text"> We have chairs, tables, tents, sound systems and decorations for rent. We also have waiter services for events. </p>
+                    </div>
+                    <div><img src="images/rentals.svg" alt="" class="type5--img"></div>
                 </div>
 
-                <div><img src="images/passportphoto.svg" alt=""class="type2--img"></div>
-            </div>
-            <div class="service__type--item bg-white">
-                <div class="servicetype--wrapper">
-                    <h4 class="roboto servicetype--header"> PRINTING, PHOTOCOPYING, FAXING...  </h4>
-                    <p class="roboto small--text servicetype--text"> We have the latest machines that give the best printing production you could possibly need. </p>
+                 <div class="service__type--item bg-white">
+                    <div class="servicetype--wrapper">
+                        <h4 class="roboto servicetype--header"> CLEANING SERVICES <p class="roboto small--text"> (HOME, OFFICES AND PUBLIC SPACES) </p> </h4>
+                        <p class="roboto small--text servicetype--text"> We offer cleaning and maintenance services ranging from private homes to offices and public spaces both temporarily and permanently. </p>
+                    </div>
+                    <div><img src="images/cleaning.svg" alt="" class="type6--img"></div>
                 </div>
-
-                <div><img src="images/printing.svg" alt="" class="type3--img"></div>
-            </div>
-            <div class="service__type--item bg-white">
-                <div class="servicetype--wrapper">
-                    <h4 class="roboto servicetype--header"> GRAPHIC AND WEB DESIGN </h4>
-                    <p class="roboto small--text servicetype--text"> Our team of graphic designers work hard daily to meet your most modern requirements for logo designs, proposal, and web designs and hosting with much more… </p>
-                </div>
-
-                <div><img src="images/graphic.svg" alt="" class="type4--img"></div>
-            </div>
-
-            <div class="service__type--item bg-white">
-                <div class="servicetype--wrapper">
-                    <h4 class="roboto servicetype--header"> EVENT RENTALS <p class="roboto small--text">(CHAIRS, TABLES, CANOPIES/TENTS, DECO)</p> </h4>
-                    <p class="roboto small--text servicetype--text"> We have chairs, tables, tents, sound systems and decorations for rent. We also have waiter services for events. </p>
-                </div>
-                <div><img src="images/rentals.svg" alt="" class="type5--img"></div>
-            </div>
-
-             <div class="service__type--item bg-white">
-                <div class="servicetype--wrapper">
-                    <h4 class="roboto servicetype--header"> CLEANING SERVICES <p class="roboto small--text"> (HOME, OFFICES AND PUBLIC SPACES) </p> </h4>
-                    <p class="roboto small--text servicetype--text"> We offer cleaning and maintenance services ranging from private homes to offices and public spaces both temporarily and permanently. </p>
-                </div>
-                <div><img src="images/cleaning.svg" alt="" class="type6--img"></div>
             </div>
 
         </section>

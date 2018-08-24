@@ -6,7 +6,7 @@
         <meta name="description" content="A portfolio page for The Lord Staffing Ventures">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Anurella Ndukwu, designed by Coker">
-        <title> SERVICES PAGE TLV </title>
+        <title> TLS FORM PAGE TLV </title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
         <link rel="stylesheet" href="css/bulmacarousel.min.css">
@@ -40,14 +40,75 @@
         <section class="tlsform__main bg-grey">
             <div class="tls__logo--text">
 
-                    <div> THE </div>
+                   <!--  <div> THE </div>
                     <div> LORD'S </div>
-                    <div> STAFFING </div>
-
+                    <div> STAFFING </div> this will be an image -->
             </div>
             <section class="form__details">
-                <h4> Please provide us with your contact and user information. </h4>
+
+              <form action="" class="tlsjob__form bg-grey">
+
+                  <h4> Please provide us with your contact and user information. </h4>
+
+                    <div>
+                      <label for="firstname" class="form__label"> First Name </label>
+                      <input type="text" id="firstName" class="form--element">
+
+                      <label for="lasttname" class="form__label"> Last Name </label>
+                      <input type="text" id="lastName" class="form--element">
+
+                      <label for="nickname" class="form__label"> Nickname </label>
+                      <input type="text" class="form--element">
+
+                      <label for="security" class="form__label"> Enter Social Security Number </label>
+                      <input type="text" class="form--element">
+
+                      <label for="reSecurity" class="form__label"> Re-Enter Social Security Number </label>
+                      <input type="text" class="form--element">
+                  </div>
+
+                  <div>
+                      <h5>MY ADDRESS </h5>
+
+                      <label for=""  class="form__label"> Street Address </label>
+                      <input type="text" class="form--element">
+
+                      <label for=""  class="form__label"> Building / Apartment </label>
+                      <input type="text" class="form--element">
+
+                      <label for=""  class="form__label"> City </label>
+                      <input type="text" class="form--element">
+
+                      <label for=""  class="form__label"> State </label>
+                      <select name="" id="" class="form--element"></select>
+
+                      <label for=""  class="form__label"> Building / Apartment </label>
+                      <input type="text" class="form--element">
+                  </div>
+
+                  <div>
+
+                      <h5> MY EMAIL </h5>
+
+                      <label for=""  class="form__label"> Home Email </label>
+                      <input type="text" class="form--element">
+
+                      <label for=""  class="form__label"> Work Email </label>
+                      <input type="text" class="form--element">
+                  </div>
+
+                  <div>
+                      <h5> Phone Number </h5>
+                      <div class="">
+                           <input type="number" maxlength="3" class="form--element">
+                           <input type="number" maxlength="3" class="form--element">
+                          <input type="text" maxlength="4" class="form--element">
+                      </div>
+                  </div>
+              </form>
+
             </section>
+            <!-- end of form -->
         </section>
 
     </main>
