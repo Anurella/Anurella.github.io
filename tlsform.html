@@ -21,6 +21,7 @@
             <div class="compLogo">
                 <img src="images/tlslogo.svg" alt="The Company Logo" class="compLogo__item">
             </div>
+
             <nav class="sitenav" role="Navigation">
                 <input type="checkbox" checked id="sitenav__button">
                 <a href="index.html" class="sitenav__item bebasNeue sitenav--active"> HOME </a>
@@ -30,6 +31,17 @@
                 <a href="tlstaffing.html" class="sitenav__item bebasNeue"> TLS </a>
                 <label for="sitenav__button" class="sitenav__close"></label>
             </nav>
+
+            <nav class="sitenav--two" role="Navigation">
+                <ul class="sitenav--list">
+                    <li>  <a href="index.html" class="sitenav--item bebasNeue"> HOME </a></li>
+                    <li> <a href="about.html" class="sitenav--item bebasNeue"> ABOUT </a></li>
+                    <li> <a href="services.html" class="sitenav--item bebasNeue"> SERVICES </a></li>
+                    <li>  <a href="contact.html" class="sitenav--item bebasNeue"> CONTACT </a></li>
+                    <li> <a href="tlstaffing.html" class="sitenav--item bebasNeue navbtn sitebtn--active"> TLS </a> </li>
+                </ul>
+            </nav>
+
     </header>
 
 
@@ -38,77 +50,91 @@
     <main>
 
         <section class="tlsform__main bg-grey">
-            <div class="tls__logo--text">
+           <h4> Please provide us with your contact and user information. </h4>
 
-                   <!--  <div> THE </div>
-                    <div> LORD'S </div>
-                    <div> STAFFING </div> this will be an image -->
-            </div>
-            <section class="form__details">
+            <div class="tls__container">
+              <div class="tls__logo--text bebasNeue--bold">
 
-              <form action="" class="tlsjob__form bg-grey">
+                      <div> THE </div>
+                      <div> LORD'S </div>
+                      <div> STAFFING </div>
+                      <!-- this will be an image -->
+              </div>
 
-                  <h4> Please provide us with your contact and user information. </h4>
+              <div class="form__details">
+                <form action="" class="tlsjob__form bg-grey">
+                     <div>
+                        <label for="firstname" class="form__label"> First Name </label>
+                        <input type="text" id="firstName" class="form--element">
+
+                        <label for="lasttname" class="form__label"> Last Name </label>
+                        <input type="text" id="lastName" class="form--element">
+
+                        <label for="nickname" class="form__label"> Nickname </label>
+                        <input type="text" class="form--element">
+
+                        <label for="security" class="form__label"> Enter Social Security Number </label>
+                        <input type="text" class="form--element">
+
+                        <label for="reSecurity" class="form__label"> Re-Enter Social Security Number </label>
+                        <input type="text" class="form--element">
+                     </div>
 
                     <div>
-                      <label for="firstname" class="form__label"> First Name </label>
-                      <input type="text" id="firstName" class="form--element">
+                        <h5>MY ADDRESS </h5>
+                        <span class="line"></span>
 
-                      <label for="lasttname" class="form__label"> Last Name </label>
-                      <input type="text" id="lastName" class="form--element">
+                        <label for=""  class="form__label"> Street Address </label>
+                        <input type="text" class="form--element">
 
-                      <label for="nickname" class="form__label"> Nickname </label>
-                      <input type="text" class="form--element">
+                        <label for=""  class="form__label"> Building / Apartment </label>
+                        <input type="text" class="form--element">
 
-                      <label for="security" class="form__label"> Enter Social Security Number </label>
-                      <input type="text" class="form--element">
+                        <label for=""  class="form__label"> City </label>
+                        <input type="text" class="form--element">
 
-                      <label for="reSecurity" class="form__label"> Re-Enter Social Security Number </label>
-                      <input type="text" class="form--element">
-                  </div>
+                        <label for=""  class="form__label"> State </label>
+                        <select name="" id="" class="form--element">
+                            <option value="">Alabama</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
 
-                  <div>
-                      <h5>MY ADDRESS </h5>
+                        <label for=""  class="form__label"> Building / Apartment </label>
+                        <input type="text" class="form--element">
+                    </div>
 
-                      <label for=""  class="form__label"> Street Address </label>
-                      <input type="text" class="form--element">
+                    <div>
+                        <h5> MY EMAIL </h5>
+                        <span class="line"></span>
 
-                      <label for=""  class="form__label"> Building / Apartment </label>
-                      <input type="text" class="form--element">
+                        <label for=""  class="form__label"> Home Email </label>
+                        <input type="text" class="form--element">
 
-                      <label for=""  class="form__label"> City </label>
-                      <input type="text" class="form--element">
+                        <label for=""  class="form__label"> Work Email </label>
+                        <input type="text" class="form--element">
+                    </div>
 
-                      <label for=""  class="form__label"> State </label>
-                      <select name="" id="" class="form--element"></select>
+                    <div>
+                        <h5> Phone Number </h5>
+                        <span class="line"></span>
 
-                      <label for=""  class="form__label"> Building / Apartment </label>
-                      <input type="text" class="form--element">
-                  </div>
+                             <input type="number" class="form--element">
+                             <input type="number" class="form--element">
 
-                  <div>
+                    </div>
 
-                      <h5> MY EMAIL </h5>
+                    <button class="appform__btn bg-red"> Submit Application </button>
+                </form>
+              </div>
+              <!-- end of form div -->
+            </div>
 
-                      <label for=""  class="form__label"> Home Email </label>
-                      <input type="text" class="form--element">
-
-                      <label for=""  class="form__label"> Work Email </label>
-                      <input type="text" class="form--element">
-                  </div>
-
-                  <div>
-                      <h5> Phone Number </h5>
-                      <div class="">
-                           <input type="number" maxlength="3" class="form--element">
-                           <input type="number" maxlength="3" class="form--element">
-                          <input type="text" maxlength="4" class="form--element">
-                      </div>
-                  </div>
-              </form>
-
-            </section>
-            <!-- end of form -->
         </section>
 
     </main>

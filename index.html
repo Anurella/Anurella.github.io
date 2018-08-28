@@ -8,8 +8,10 @@
         <meta name="author" content="Anurella Ndukwu, designed by Coker">
         <title> HOME PAGE TLV </title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-        <link rel="stylesheet" href="css/bulmacarousel.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+            crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <link rel="stylesheet" href="css/bulmacarousel.min.css"> -->
         <link rel="stylesheet" href="css/styles.css">
         <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +46,7 @@
         </header>
         <main>
             <section class="siteMural">
-                <div class="carousel carousel-animated carousel-animate-slide bg-black">
+                <!-- <div class="carousel carousel-animated carousel-animate-slide bg-black">
                     <div class="carousel-container">
                         <div class="carousel-item has-background"><img src="images/carousel-img1.svg" alt="" class="is-background"></div>
                         <div class="carousel-item has-background"><img src="images/carousel-img2.svg" alt="" class="is-background"></div>
@@ -53,10 +55,26 @@
                         <div class="carousel-nav-left white"><i class="fas fa-circle"></i></div>
                         <div class="carousel-nav-right white"><i class="fas fa-circle"></i></div>
                     </div>
+                </div> -->
+
+                <div id="siteCarousel" class="carousel slide" data-ride="carousel">
+                <div>
+                    <!-- Indicators -->
+                      <ul class="carousel-indicators">
+                        <li data-target="#siteCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#siteCarousel" data-slide-to="1"></li>
+                      </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="background: url('images/carousel-img1.svg') center/cover no-repeat">
+                        </div>
+                        <div class="carousel-item" style="background: url('images/carousel-img2.svg') center/cover no-repeat">
+                        </div>
+                    </div>
                 </div>
+            </div>
                 <div class="carousel__msg white">
                     <p class="bebasNeue--bold"> ...WE GET THE WORK </p>
-                    <p class="bebasNeue--bold"> DONE AND MORE... </p>
+                    <p class="bebasNeue--bold last__child"> DONE AND MORE... </p>
                     <a href="services.html" class="link__btn red--btn roboto">  CURIOUS  </a>
                 </div>
             </section>
@@ -68,21 +86,23 @@
                     </div>
                 </div>
                 <div class="tls__content--msg">
-                    <h2 class="first__header bebasNeue--bold">  THE LORD'S STAFFING.
-                        <span class="super--script"><svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.5 0L9.18385 5.18237L14.6329 5.18237L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237L5.81615 5.18237L7.5 0Z" fill="#FF0000"/>
-                        </svg></span>
-                    </h2>
-                    <div class="msg__content">
-                        <p class="roboto">
-                            The Lord's Staffing is an agency that specializes with matching you with highly skilled industrial workers either by direct hires or contract staffing.
-                        </p>
-                        <!-- <p class="roboto"> We have our golden rules that guides our employer to employee relationships; Professionalism, Simplicity, Friendliness, Excellence, Trustworthiness, Responsibility, Innovation
-                        </p> -->
-                        <p class="roboto">
-                            We give our clients good deals and provide the most suitable employee that meets the client’s needs maximally. Just try us and you’d wish you tried us earlier!
-                        </p>
-                        <a href="tlstaffing.html" class="link__btn roboto black--btn"> Learn More !</a>
+                    <div>
+                        <h2 class="first__header bebasNeue--bold">  THE LORD'S STAFFING.
+                            <span class="super--script"><svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 0L9.18385 5.18237L14.6329 5.18237L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237L5.81615 5.18237L7.5 0Z" fill="#FF0000"/>
+                            </svg></span>
+                        </h2>
+                        <div class="msg__content">
+                            <p class="roboto">
+                                The Lord's Staffing is an agency that specializes with matching you with highly skilled industrial workers either by direct hires or contract staffing.
+                            </p>
+                            <!-- <p class="roboto"> We have our golden rules that guides our employer to employee relationships; Professionalism, Simplicity, Friendliness, Excellence, Trustworthiness, Responsibility, Innovation
+                            </p> -->
+                            <p class="roboto">
+                                We give our clients good deals and provide the most suitable employee that meets the client’s needs maximally. Just try us and you’d wish you tried us earlier!
+                            </p>
+                            <a href="tlstaffing.html" class="link__btn roboto black--btn"> Learn More !</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -90,11 +110,9 @@
         <footer class="tunga"> &copy; The Lord Ventures 2018. </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="js/bulma-carousel.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"crossorigin="anonymous" async></script>
         <script src="js/main.js"></script>
-        <script>
-        var carousels = bulmaCarousel.attach();
-        </script>
+
     </body>
 
 </html>

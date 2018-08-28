@@ -135,7 +135,8 @@ a {
 
 a:hover, a:active, a:focus {
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 img {
   max-width: 100%;
@@ -178,7 +179,7 @@ colors
 FONT FACES
  ---------*/
 @font-face {
-  font-family: "Bebas Neue";
+  font-family: "BebasNeue";
   src: url("./fonts/bebasneue.eot");
   src: url("./fonts/bebasneue-webfont.woff2") format("woff2"), url("./fonts/bebasneue-webfont.woff") format("woff"), url("./fonts/bebasneue.svg") format("svg"), url("./fonts/bebasneue-webfont.ttf") format("truetype"), url("./fonts/bebasneue.otf") format("opentype"); }
 
@@ -188,34 +189,34 @@ FONT FACES
   src: url("./fonts/tunga.woff2") format("woff2"), url("./fonts/tunga.woff") format("woff"), url("./fonts/tunga.svg") format("svg"), url("./fonts/tunga.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Roboto Regular";
+  font-family: "RobotoRegular";
   src: url("./fonts/roboto-regular.eot");
   src: url("./fonts/roboto-regular.woff2") format("woff2"), url("./fonts/roboto-regular.woff") format("woff"), url("./fonts/roboto-regular.svg") format("svg"), url("./fonts/roboto-regular.ttf") format("truetype"); }
 
 body {
-  font: 18px/22px 'Bebas Neue', 'Tunga', 'Roboto Regular' , Arial, sans-serif; }
+  font: 18px/22px 'BebasNeue', 'Tunga', 'RobotoRegular' , Arial, sans-serif; }
 
 .bebasNeue {
-  font-family: Bebas Neue; }
+  font-family: 'BebasNeue'; }
 
 .bebasNeue--bold {
-  font-family: 'Bebas Neue';
+  font-family: 'BebasNeue';
   font-weight: 700; }
 
 .tunga {
   font-family: Tunga; }
 
 .robotoReg {
-  font-family: 'Roboto Regular'; }
+  font-family: 'RobotoRegular'; }
 
 .bold {
   font-weight: bold; }
 
 .roboto {
-  font-family: 'Roboto Regular'; }
+  font-family: 'RobotoRegular'; }
 
 .roboto--bold {
-  font-family: 'Roboto Regular';
+  font-family: 'RobotoRegular';
   font-weight: 700; }
 
 /* --------
@@ -241,6 +242,9 @@ font sizes
 
 .about__content h2 {
   font-size: 1.2rem; }
+
+.services__main--one h1 {
+  letter-spacing: 3px; }
 
 /*# sourceMappingURL=fonts.css.map */
 
@@ -550,6 +554,9 @@ non mobile nav
   border-radius: .5em;
   padding: .5em .9em; }
 
+.sitebtn--active {
+  background-color: #ffa4b0; }
+
 /**********
 FOOTER
 **********/
@@ -560,7 +567,7 @@ footer {
   z-index: 99;
   background-color: #000000;
   padding: .5em;
-  height: 5vh;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -608,18 +615,21 @@ main {
 /* -----------
 HOME PAGE
 -------------- */
-.carousel, .carousel-container {
+.carousel-item {
+  height: 65vh; }
+
+.carousel-inner img {
+  width: 100%;
   height: 100%; }
 
-.carousel .carousel-navigation {
-  position: absolute;
-  justify-content: center;
-  bottom: 0;
-  z-index: 99; }
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff; }
 
-.carousel .carousel-navigation .carousel-nav-left, .carousel .carousel-navigation .carousel-nav-right {
-  padding: 0;
-  margin: 0.5em; }
+.carousel-indicators .active {
+  background-color: #FF1717; }
 
 .carousel__msg {
   position: absolute;
@@ -628,6 +638,10 @@ HOME PAGE
   text-align: center;
   width: 100%;
   letter-spacing: 1px; }
+
+.last__child {
+  margin-left: .6em;
+  margin-bottom: .5em; }
 
 .tls__content {
   position: relative;
@@ -679,8 +693,7 @@ HOME PAGE
   position: relative;
   vertical-align: baseline;
   position: relative;
-  top: -0.4em;
-  left: 0.4em; }
+  left: 0.2em; }
 
 .msg__content {
   font-size: .6rem; }
@@ -897,8 +910,8 @@ TLS
   color: white;
   font-size: .7rem;
   line-height: 1.3;
-  background-color: black;
-  padding: 1em 1em;
+  background-color: #ffa4b0;
+  padding: 1.2em 1em;
   right: 0;
   text-align: center; }
 
@@ -906,6 +919,9 @@ TLS
   width: 80%;
   margin: 0 auto;
   padding: 1em 0; }
+
+.content__header > div {
+  display: inline-block; }
 
 .tls__service--list {
   font-size: .8rem;
@@ -928,19 +944,55 @@ TLS FORM
   height: 100%;
   width: 100%; }
 
+.tls__container {
+  display: flex;
+  flex-wrap: wrap; }
+
 .tls__logo--text {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: calc(100vh - 80vh); }
+  position: relative;
+  height: 100%;
+  top: calc(100vh - 70vh);
+  width: 30%;
+  text-align: right;
+  margin-left: .5em;
+  color: black; }
+
+.form__details {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 1em; }
 
 .tlsjob__form {
   width: 100%; }
 
 .form__label {
   display: block;
-  font-size: .8rem;
+  font-size: .7rem;
   font-weight: bold; }
+
+.line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: black;
+  margin-bottom: 1em; }
+
+.tlsjob__form h5 {
+  margin-top: 1em;
+  font-size: .8rem; }
+
+.tlsform__main h4 {
+  font-size: .9rem;
+  line-height: 1.2;
+  padding: 1em; }
+
+.appform__btn {
+  margin: 1em 0;
+  padding: .5em 1em;
+  color: white;
+  border: none; }
 
 /* --------
 ANIMATION
@@ -967,6 +1019,30 @@ ANIMATION
 
 /*# sourceMappingURL=layout.css.map */
 
+/* -----------
+colors
+---------- */
+.bg-black {
+  background-color: #000; }
+
+.black {
+  color: #000; }
+
+.bg-red {
+  background: #FF1717; }
+
+.bg-white {
+  background-color: #fff; }
+
+.white {
+  color: #fff; }
+
+.bg-red {
+  background-color: #FF1717; }
+
+.bg-grey {
+  background-color: #bcbcbc; }
+
 /* --------------
 MEDIA QUERY
 ---------- */
@@ -981,24 +1057,49 @@ MEDIA QUERY
 
 @media screen and (min-width: 768px) {
   .big--text {
-    font-size: .9rem;
+    font-size: 1.1rem;
     margin-bottom: .5em; }
   /* ---------
     HEADER
     -------  */
   header {
     justify-content: space-between;
-    align-content: center; }
+    align-items: center; }
+  .compLogo {
+    width: 120px; }
   .sitenav {
     display: none; }
+  .sitenav--list {
+    padding: 1em; }
+  .sitenav--item {
+    font-size: 1.2rem; }
   .carousel__msg p {
-    font-size: 2.5rem; }
+    font-size: 3.5rem; }
   .first__header {
-    font-size: 1.5rem; }
+    font-size: 2rem; }
   .tls__content--img2 {
     display: none; }
   .tls__content--img3 {
-    display: block; }
+    display: block;
+    position: relative;
+    bottom: -1.2em; }
+  .tls__content--msg {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0; }
+  .tls__content--msg > div {
+    position: relative;
+    left: -8%;
+    top: 11%; }
+  .tls__content--msg svg, .main--two svg {
+    width: 30px;
+    height: 30px; }
+  .msg__content p {
+    font-size: 1.2rem;
+    margin: 1em 0; }
+  .link__btn {
+    font-size: 1rem;
+    padding: .4em 1.5em; }
   .about__content {
     width: 90%;
     -webkit-display: flex;
@@ -1042,13 +1143,70 @@ MEDIA QUERY
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+  .services__main--one > div {
+    width: 60%;
+    margin: 0 auto; }
   .services__main--one h1 {
-    font-size: 1.3rem; }
+    font-size: 3rem;
+    line-height: 2rem;
+    margin-bottom: .2em; }
+  .main--two h2 {
+    font-size: 2rem; }
+  .main--two p:last-of-type {
+    width: 70%;
+    margin: 0 auto 1em;
+    font-size: 1.1rem; }
+  .moreService {
+    padding: 2% 0 3%; }
+  .moreService h2 {
+    font-size: 2rem;
+    margin-bottom: .2em; }
+  .arrow__down {
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-top: 27px solid #fff; }
   .type4--img, .type5--img, .type6--img {
     bottom: -0.3em; }
+  .tlsform__main > div {
+    height: 100%; }
+  .tlstaffing__content {
+    display: flex;
+    width: 70%; }
+  .content__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+    font-size: 2.5rem; }
+  .content__header > div {
+    margin: .2em; }
   .tls__service--list {
     column-count: 2; }
   .jobseeker {
-    margin: 1em 0; } }
+    margin: 1em 0; }
+  .form__details {
+    width: 50%; }
+  footer {
+    font-size: 1.2rem; } }
+
+@media (max-height: 768px) {
+  .siteMural, .carousel-item {
+    height: 75vh; }
+  .tls__content {
+    align-items: flex-end; }
+  .tls__content--img2 {
+    display: none; }
+  .tls__content--img3 {
+    display: block;
+    position: relative;
+    bottom: -1.2em; }
+  .tls__content--msg {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0; }
+  .tls__content--msg > div {
+    position: relative; }
+  footer {
+    height: 20px; } }
 
 /*# sourceMappingURL=mediaquery.css.map */
