@@ -179,44 +179,46 @@ colors
 FONT FACES
  ---------*/
 @font-face {
-  font-family: "BebasNeue";
-  src: url("./fonts/bebasneue.eot");
-  src: url("./fonts/bebasneue-webfont.woff2") format("woff2"), url("./fonts/bebasneue-webfont.woff") format("woff"), url("./fonts/bebasneue.svg") format("svg"), url("./fonts/bebasneue-webfont.ttf") format("truetype"), url("./fonts/bebasneue.otf") format("opentype"); }
+  font-family: 'Bebas Neue';
+  src: url("../fonts/BebasNeue.woff2") format("woff2"), url("../fonts/BebasNeue.woff") format("woff"), url("../fonts/BebasNeue.svg") format("svg"), url("../fonts/BebasNeue.ttf") format("truetype");
+  font-style: normal; }
 
 @font-face {
   font-family: "Tunga";
-  src: url("./fonts/tunga.eot");
-  src: url("./fonts/tunga.woff2") format("woff2"), url("./fonts/tunga.woff") format("woff"), url("./fonts/tunga.svg") format("svg"), url("./fonts/tunga.ttf") format("truetype"); }
+  src: url("./fonts/Tunga.eot");
+  src: url("../fonts/Tunga.eot?#iefix") format("embedded-opentype"), url("../fonts/Tunga.woff2") format("woff2"), url("../fonts/Tunga.woff") format("woff"), url("../fonts/Tunga.svg#Tunga") format("svg"), url("../fonts/Tunga.ttf") format("truetype");
+  font-style: normal; }
 
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("./fonts/roboto-regular.eot");
-  src: url("./fonts/roboto-regular.woff2") format("woff2"), url("./fonts/roboto-regular.woff") format("woff"), url("./fonts/roboto-regular.svg") format("svg"), url("./fonts/roboto-regular.ttf") format("truetype"); }
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal; }
 
 body {
-  font: 18px/22px 'BebasNeue', 'Tunga', 'RobotoRegular' , Arial, sans-serif; }
+  font: 18px/22px 'Bebas Neue', "Tunga", "Roboto"; }
 
 .bebasNeue {
-  font-family: 'BebasNeue'; }
+  font-family: 'Bebas Neue'; }
 
 .bebasNeue--bold {
-  font-family: 'BebasNeue';
+  font-family: 'Bebas Neue';
   font-weight: 700; }
 
 .tunga {
-  font-family: Tunga; }
+  font-family: "Tunga"; }
 
 .robotoReg {
-  font-family: 'RobotoRegular'; }
+  font-family: "Roboto"; }
 
 .bold {
   font-weight: bold; }
 
 .roboto {
-  font-family: 'RobotoRegular'; }
+  font-family: "Roboto"; }
 
 .roboto--bold {
-  font-family: 'RobotoRegular';
+  font-family: "Roboto";
   font-weight: 700; }
 
 /* --------
@@ -229,9 +231,9 @@ font sizes
   font-size: 0.5rem; }
 
 .carousel__msg p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   letter-spacing: 2px;
-  line-height: 1.2; }
+  line-height: .8; }
 
 .small--text {
   font-size: 0.7rem;
@@ -242,6 +244,9 @@ font sizes
 
 .about__content h2 {
   font-size: 1.2rem; }
+
+.link__btn {
+  font-family: "RobotoRegular"; }
 
 .services__main--one h1 {
   letter-spacing: 3px; }
@@ -552,7 +557,7 @@ non mobile nav
 .navbtn {
   background: #bcbcbc;
   border-radius: .5em;
-  padding: .5em .9em; }
+  padding: .3em .7em; }
 
 .sitebtn--active {
   background-color: #ffa4b0; }
@@ -640,7 +645,7 @@ HOME PAGE
   letter-spacing: 1px; }
 
 .last__child {
-  margin-left: .6em;
+  margin-left: 22px;
   margin-bottom: .5em; }
 
 .tls__content {
@@ -774,14 +779,13 @@ SERVICE PAGE
   background: #000 url("../images/servicemural.svg") no-repeat center/cover; }
 
 .services__main {
-  text-align: center;
-  padding-bottom: 1em; }
+  text-align: center; }
 
 .services__main--one {
   padding: 3% 5%; }
 
 .services__main--two {
-  padding: 5% 5% 0 5%; }
+  padding: 3% 5% 0 5%; }
 
 .main--two p:first-of-type {
   font-size: .8rem; }
@@ -888,7 +892,7 @@ CONTACT PAGE
 .contact__dets h5 {
   font-size: .9rem; }
 
-.form__success, .form__required, .form__error {
+.form__success, .emailError, .form__required, .form__error {
   display: none;
   font-size: 0.6rem; }
 
@@ -942,7 +946,8 @@ TLS FORM
 .tlsform__main {
   position: relative;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: auto; }
 
 .tls__container {
   display: flex;
@@ -953,7 +958,6 @@ TLS FORM
   flex-direction: column;
   position: relative;
   height: 100%;
-  top: calc(100vh - 70vh);
   width: 30%;
   text-align: right;
   margin-left: .5em;
@@ -1059,6 +1063,9 @@ MEDIA QUERY
   .big--text {
     font-size: 1.1rem;
     margin-bottom: .5em; }
+  .link__btn {
+    font-size: 1rem;
+    padding: .1em 24px; }
   /* ---------
     HEADER
     -------  */
@@ -1097,9 +1104,6 @@ MEDIA QUERY
   .msg__content p {
     font-size: 1.2rem;
     margin: 1em 0; }
-  .link__btn {
-    font-size: 1rem;
-    padding: .4em 1.5em; }
   .about__content {
     width: 90%;
     -webkit-display: flex;
@@ -1143,23 +1147,28 @@ MEDIA QUERY
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+  .services__main--one {
+    padding: 2% 0; }
   .services__main--one > div {
     width: 60%;
     margin: 0 auto; }
   .services__main--one h1 {
-    font-size: 3rem;
-    line-height: 2rem;
-    margin-bottom: .2em; }
+    font-size: 2.5rem;
+    line-height: 22px;
+    margin-bottom: 11px; }
   .main--two h2 {
-    font-size: 2rem; }
+    font-size: 1.6rem; }
   .main--two p:last-of-type {
     width: 70%;
-    margin: 0 auto 1em;
+    margin: 0 auto .7em;
     font-size: 1.1rem; }
+  .services__main--two > p {
+    width: 60%;
+    margin: .5em auto; }
   .moreService {
     padding: 2% 0 3%; }
   .moreService h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: .2em; }
   .arrow__down {
     border-right: 20px solid transparent;
@@ -1186,10 +1195,16 @@ MEDIA QUERY
     margin: 1em 0; }
   .form__details {
     width: 50%; }
+  .tlsjob__form .form__label {
+    font-size: 1rem;
+    margin-bottom: .5em; }
+  .tlsjob__form .form--element {
+    height: 40px; }
   footer {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem;
+    padding: 1em; } }
 
-@media (max-height: 768px) {
+@media (max-height: 412px) {
   .siteMural, .carousel-item {
     height: 75vh; }
   .tls__content {

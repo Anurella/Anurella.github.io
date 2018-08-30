@@ -8,8 +8,7 @@
         <meta name="author" content="Anurella Ndukwu, designed by Coker">
         <title> CONTACT PAGE TLV </title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-        <link rel="stylesheet" href="css/bulmacarousel.min.css">
+
         <link rel="stylesheet" href="css/styles.css">
         <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -59,7 +58,7 @@
                         <input name="fullname" type="text" class="form--element formrequired" required>
 
                         <label for="email" class="form--label roboto"> Email  </label>
-                        <input  name="email" type="email" class="form--element formrequired" required>
+                        <input  name="email" type="email" class="email form--element formrequired" required>
 
                         <label for="subject" class="form--label roboto"> Subject   </label>
                         <input  name="subject" type="text" class="form--element formrequired" required placeholder="RE: ">
@@ -68,9 +67,10 @@
                         <textarea name="message" id="" rows="6" class="form--element formrequired"></textarea>
 
 
-                        <p class="form__success"> Thank you and we would get back to you. </p>
-                        <p class="form__required"> Please fill in required fields </p>
-                        <p class="form__error"> Sorry! Message not sent. </p>
+                        <p class="form__success roboto"> Thank you and we would get back to you. </p>
+                        <p class="emailError roboto"> Please fill in the correct email. </p>
+                        <p class="form__required roboto"> Please fill in required fields </p>
+                        <p class="form__error roboto"> Sorry! Message could not be sent. </p>
 
 
                         <div style="display: flex; justify-content: center;">
@@ -109,7 +109,7 @@
         <footer class="tunga"> &copy; The Lord Ventures 2018. </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="js/bulma-carousel.min.js"></script>
+
         <script src="js/main.js"></script>
     </body>
 </html>
