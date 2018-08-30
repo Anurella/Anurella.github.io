@@ -181,22 +181,25 @@ FONT FACES
 @font-face {
   font-family: 'Bebas Neue';
   src: url("../fonts/BebasNeue.woff2") format("woff2"), url("../fonts/BebasNeue.woff") format("woff"), url("../fonts/BebasNeue.svg") format("svg"), url("../fonts/BebasNeue.ttf") format("truetype");
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: "Tunga";
   src: url("./fonts/Tunga.eot");
   src: url("../fonts/Tunga.eot?#iefix") format("embedded-opentype"), url("../fonts/Tunga.woff2") format("woff2"), url("../fonts/Tunga.woff") format("woff"), url("../fonts/Tunga.svg#Tunga") format("svg"), url("../fonts/Tunga.ttf") format("truetype");
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   src: url("./fonts/Roboto-Regular.eot");
   src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg"), url("../fonts/Roboto-Regular.ttf") format("truetype");
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 body {
-  font: 18px/22px 'Bebas Neue', "Tunga", "Roboto"; }
+  font: 18px/22px 'Bebas Neue', "Tunga", "Roboto", BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 .bebasNeue {
   font-family: 'Bebas Neue'; }
@@ -233,7 +236,7 @@ font sizes
 .carousel__msg p {
   font-size: 1.5rem;
   letter-spacing: 2px;
-  line-height: .8; }
+  line-height: .9; }
 
 .small--text {
   font-size: 0.7rem;
@@ -246,7 +249,7 @@ font sizes
   font-size: 1.2rem; }
 
 .link__btn {
-  font-family: "RobotoRegular"; }
+  font-family: "Roboto"; }
 
 .services__main--one h1 {
   letter-spacing: 3px; }
@@ -371,10 +374,10 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
-  font-size: 0.6rem;
-  line-height: 0.6rem;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
   font-weight: 300;
-  padding: 0.53333rem;
+  padding: 0.43333rem;
   transform: translateX(calc(-100% - 2rem));
   transition: background-color 0.3s; }
 
@@ -464,8 +467,8 @@ MENU CLOSE
 .sitenav__close::before {
   position: absolute;
   content: url("../images/times-solid.svg");
-  top: 0.53333rem;
-  left: 0.53333rem;
+  top: 0.43333rem;
+  left: 0.43333rem;
   z-index: 1; }
 
 .sitenav__close::after {
@@ -485,23 +488,23 @@ MENU CLOSE
 
 input[type=checkbox]:checked ~ .sitenav__item:nth(6) {
   transition: transform 0.3s 0s, background-color 0.3s;
-  transform: translateX(calc(-100% - 0.6rem - item-padding * 2)) !important; }
+  transform: translateX(calc(-100% - 0.8rem - item-padding * 2)) !important; }
 
 input[type=checkbox]:checked ~ .sitenav__item:nth(5) {
   transition: transform 0.3s 0.1s, background-color 0.3s;
-  transform: translateX(calc(-100% - 0.6rem - item-padding * 2)) !important; }
+  transform: translateX(calc(-100% - 0.8rem - item-padding * 2)) !important; }
 
 input[type=checkbox]:checked ~ .sitenav__item:nth(4) {
   transition: transform 0.3s 0.2s, background-color 0.3s;
-  transform: translateX(calc(-100% - 0.6rem - item-padding * 2)) !important; }
+  transform: translateX(calc(-100% - 0.8rem - item-padding * 2)) !important; }
 
 input[type=checkbox]:checked ~ .sitenav__item:nth(3) {
   transition: transform 0.3s 0.3s, background-color 0.3s;
-  transform: translateX(calc(-100% - 0.6rem - item-padding * 2)) !important; }
+  transform: translateX(calc(-100% - 0.8rem - item-padding * 2)) !important; }
 
 input[type=checkbox]:checked ~ .sitenav__item:nth(2) {
   transition: transform 0.3s 0.4s, background-color 0.3s;
-  transform: translateX(calc(-100% - 0.6rem - item-padding * 2)) !important; }
+  transform: translateX(calc(-100% - 0.8rem - item-padding * 2)) !important; }
 
 input[type=checkbox]:checked ~ .sitenav__close {
   transition: transform 0.2s 0.3s, background-color 0.3s;
@@ -623,6 +626,9 @@ HOME PAGE
 .carousel-item {
   height: 65vh; }
 
+.carousel-inner {
+  background-color: #000; }
+
 .carousel-inner img {
   width: 100%;
   height: 100%; }
@@ -665,7 +671,7 @@ HOME PAGE
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: url("../images/homepg5.svg");
+  background-image: url("../images/homepg5.png");
   background-size: cover; }
 
 .tls__content--msg {
@@ -738,7 +744,7 @@ ABOUT PAGE
   position: relative;
   width: inherit;
   height: inherit;
-  background: #000 url("../images/about1.svg") no-repeat center center/cover; }
+  background: #000 url("../images/about1.jpg") no-repeat center center/cover; }
 
 .about__middle {
   padding-top: 2em;
@@ -776,7 +782,7 @@ SERVICE PAGE
   position: relative;
   width: inherit;
   height: inherit;
-  background: #000 url("../images/servicemural.svg") no-repeat center/cover; }
+  background: #000 url("../images/servicemural.jpg") no-repeat center/cover; }
 
 .services__main {
   text-align: center; }
@@ -836,7 +842,7 @@ SERVICE PAGE
 .type2--img {
   position: relative;
   right: -8%;
-  bottom: -0.55em; }
+  bottom: -0.3em; }
 
 .type3--img {
   position: relative;
@@ -845,7 +851,7 @@ SERVICE PAGE
 
 .type4--img, .type5--img, .type6--img {
   position: relative;
-  bottom: 0.6em; }
+  bottom: -.3em; }
 
 /* -------
 CONTACT PAGE
@@ -854,7 +860,7 @@ CONTACT PAGE
   position: relative;
   width: inherit;
   height: inherit;
-  background: #000 url("../images/contactMural.svg") no-repeat right center/cover; }
+  background: #000 url("../images/contactmural.jpg") no-repeat right center/cover; }
 
 .contact__details {
   position: relative;
@@ -906,7 +912,7 @@ TLS
   position: relative;
   width: inherit;
   height: inherit;
-  background: #000 url("../images/tlsmural.svg") no-repeat left center/cover; }
+  background: #000 url("../images/tlsmural.jpg") no-repeat left center/cover; }
 
 .employer {
   position: absolute;
@@ -958,10 +964,12 @@ TLS FORM
   flex-direction: column;
   position: relative;
   height: 100%;
-  width: 30%;
   text-align: right;
   margin-left: .5em;
-  color: black; }
+  color: black;
+  font-size: 2rem;
+  line-height: 28px;
+  margin-top: 55%; }
 
 .form__details {
   width: 50%;
@@ -1082,6 +1090,8 @@ MEDIA QUERY
     font-size: 1.2rem; }
   .carousel__msg p {
     font-size: 3.5rem; }
+  .last__child {
+    margin-left: 42px; }
   .first__header {
     font-size: 2rem; }
   .tls__content--img2 {
@@ -1102,7 +1112,7 @@ MEDIA QUERY
     width: 30px;
     height: 30px; }
   .msg__content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1em 0; }
   .about__content {
     width: 90%;
@@ -1133,7 +1143,8 @@ MEDIA QUERY
   .contact__dets h5 {
     font-size: 1.1rem; }
   .contact__form p {
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    margin: 22px 0; }
   .form--label {
     font-size: 1rem; }
   .servicetype__container {
@@ -1186,20 +1197,38 @@ MEDIA QUERY
     justify-content: center;
     flex-direction: column;
     text-align: right;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    margin-right: .5em; }
   .content__header > div {
     margin: .2em; }
   .tls__service--list {
-    column-count: 2; }
+    column-count: 2;
+    margin: 0; }
   .jobseeker {
     margin: 1em 0; }
   .form__details {
-    width: 50%; }
+    padding-bottom: 42px;
+    padding-top: 9px; }
+  .tls__logo--text {
+    right: -1.5em;
+    font-size: 3rem;
+    line-height: .9; }
+  .tlsform__main h4 {
+    font-size: 1.5rem;
+    text-align: right;
+    margin-right: 7%; }
+  .tlsjob__form h5 {
+    font-size: 1.3rem;
+    margin-bottom: .2em; }
+  .employer h6 {
+    font-size: 1.2rem; }
   .tlsjob__form .form__label {
     font-size: 1rem;
     margin-bottom: .5em; }
   .tlsjob__form .form--element {
     height: 40px; }
+  .jobseeker h6 {
+    font-size: 1.5rem; }
   footer {
     font-size: 1.2rem;
     padding: 1em; } }
