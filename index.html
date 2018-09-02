@@ -7,9 +7,110 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Anurella Ndukwu, designed by Coker">
         <title> HOME PAGE TLV </title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-            crossorigin="anonymous">
+        <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        </noscript>
+        <script>
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        (function(w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function() {};
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function() {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function() {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function(link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function() {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function() {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function() {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function() {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+
+
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            } else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+        </script>
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
         <link rel="stylesheet" href="css/bulmacarousel.min.css"> -->
         <link rel="stylesheet" href="css/styles.css">
@@ -32,16 +133,14 @@
                 <a href="tlstaffing.html" class="sitenav__item bebasNeue"> TLS </a>
                 <label for="sitenav__button" class="sitenav__close"></label>
             </nav>
-
             <nav class="sitenav--two" role="Navigation">
                 <ul class="sitenav--list">
-                    <li>  <a href="index.html" class="sitenav--item bebasNeue sitenav--active"> HOME </a></li>
+                    <li> <a href="index.html" class="sitenav--item bebasNeue sitenav--active"> HOME </a></li>
                     <li> <a href="about.html" class="sitenav--item bebasNeue"> ABOUT </a></li>
                     <li> <a href="services.html" class="sitenav--item bebasNeue"> SERVICES </a></li>
-                    <li>  <a href="contact.html" class="sitenav--item bebasNeue"> CONTACT </a></li>
+                    <li> <a href="contact.html" class="sitenav--item bebasNeue"> CONTACT </a></li>
                     <li> <a href="tlstaffing.html" class="sitenav--item bebasNeue navbtn"> TLS </a> </li>
                 </ul>
-
             </nav>
         </header>
         <main>
@@ -56,22 +155,21 @@
                         <div class="carousel-nav-right white"><i class="fas fa-circle"></i></div>
                     </div>
                 </div> -->
-
                 <div id="siteCarousel" class="carousel slide" data-ride="carousel">
-                <div>
-                    <!-- Indicators -->
-                      <ul class="carousel-indicators">
-                        <li data-target="#siteCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#siteCarousel" data-slide-to="1"></li>
-                      </ul>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" style="background: url('images/carouselimg1.jpg') center/cover no-repeat">
-                        </div>
-                        <div class="carousel-item" style="background: url('images/carouselimg2.jpg') center/cover no-repeat">
+                    <div>
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#siteCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#siteCarousel" data-slide-to="1"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="background: url('images/carouselimg1.jpg') center/cover no-repeat">
+                            </div>
+                            <div class="carousel-item" style="background: url('images/carouselimg2.jpg') center/cover no-repeat">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                 <div class="carousel__msg white">
                     <p class="bebasNeue--bold"> ...WE GET THE WORK </p>
                     <p class="bebasNeue--bold last__child"> DONE AND MORE... </p>
@@ -110,9 +208,8 @@
         <footer class="tunga"> &copy; The Lord Ventures 2018. </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"crossorigin="anonymous" async></script>
-        <script src="js/main.js"></script>
-
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous" async></script>
+        <script src="js/main.js" async></script>
     </body>
 
 </html>
