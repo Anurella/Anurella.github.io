@@ -1,6 +1,3 @@
-# Pixel Art Maker Project 
-ALC Program
+# My font repository
 
-##link to github page
-
-https://anurella.github.io/ 
+## https://anurella.github.io/ 
