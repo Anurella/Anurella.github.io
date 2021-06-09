@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Cerebri Sans Pro';
-    src: url('https://anurella.github.io/fonts/CerebriSansPro-SemiBold.woff2') format('woff2'),
-        url('https://anurella.github.io/fonts/CerebriSansPro-SemiBold.woff') format('woff');
+    src: url('fonts/CerebriSansPro-SemiBold.woff2') format('woff2'),
+        url('fonts/CerebriSansPro-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Cerebri Sans Pro';
-    src: url('https://anurella.github.io/fonts/CerebriSansPro-Light.woff2') format('woff2'),
-        url('https://anurella.github.io/fonts/CerebriSansPro-Light.woff') format('woff');
+    src: url('fonts/CerebriSansPro-Light.woff2') format('woff2'),
+        url('fonts/CerebriSansPro-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
