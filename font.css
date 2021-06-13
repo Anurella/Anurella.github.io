@@ -16,3 +16,19 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: ETC-Trispace;
+    src: url(fonts/ETCTrispaceVariable.woff2) format("woff2-variations");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:Inter;
+    src: url(fonts/Inter-VariableFont.ttf) format("ttf-variations");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+
+
