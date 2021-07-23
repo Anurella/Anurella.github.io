@@ -30,5 +30,23 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri-Bold.woff2') format('woff2'),
+        url('fonts/Calibri-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri.woff2') format('woff2'),
+        url('fonts/Calibri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
