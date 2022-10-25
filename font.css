@@ -62,6 +62,7 @@
        url('fonts/Switzer-Variable-Regular.woff') format('woff'),
        url('fonts/Switzer-Variable.ttf') format('truetype');
        font-display: swap;
+    font-weight:400;
        font-style: normal;
 }
 
