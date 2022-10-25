@@ -58,8 +58,8 @@
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('fonts/Switzer-Variable-Regular.woff2') format('woff2'),
-       url('fonts/Switzer-Variable-Regular.woff') format('woff'),
+  src: url('fonts/SwitzerVariable-Regular.woff2') format('woff2'),
+       url('fonts/SwitzerVariable-Regular.woff') format('woff'),
        url('fonts/Switzer-Variable.ttf') format('truetype');
        font-display: swap;
     font-weight:400;
